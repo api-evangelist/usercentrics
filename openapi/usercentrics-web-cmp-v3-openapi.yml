@@ -1,0 +1,137 @@
+openapi: 3.1.0
+info:
+  title: Usercentrics Web CMP V3 API
+  description: |
+    Browser-side JavaScript surface of the Usercentrics Web CMP V3 modeled as logical HTTP
+    operations. Covers the UC_UI control API, IAB TCF 2.3 __tcfapi, IAB GPP __gpp, and Google
+    Consent Mode v2 signals delivered through the Usercentrics CDN script.
+
+    Reference: https://docs.usercentrics.com/cmp_v3/latest/
+  version: "3.0.0"
+  contact:
+    name: Usercentrics Documentation
+    url: https://docs.usercentrics.com/cmp_v3/latest/
+servers:
+  - url: https://app.usercentrics.eu
+    description: Usercentrics CDN/control plane (EU).
+tags:
+  - name: UI
+  - name: Consent
+  - name: TCF
+  - name: GPP
+  - name: Consent Mode
+paths:
+  /ui/show-first-layer:
+    post:
+      tags: [UI]
+      summary: Show First Layer
+      description: Programmatically display the first-layer consent banner (UC_UI.showFirstLayer).
+      operationId: uiShowFirstLayer
+      responses:
+        '200': { description: Banner shown. }
+  /ui/show-second-layer:
+    post:
+      tags: [UI]
+      summary: Show Second Layer
+      description: Open the second-layer preference center (UC_UI.showSecondLayer).
+      operationId: uiShowSecondLayer
+      responses:
+        '200': { description: Preference center shown. }
+  /ui/accept-all:
+    post:
+      tags: [Consent]
+      summary: Accept All Services
+      description: Grant consent for every configured service (UC_UI.acceptAllConsents).
+      operationId: uiAcceptAll
+      responses:
+        '200': { description: All consents granted. }
+  /ui/deny-all:
+    post:
+      tags: [Consent]
+      summary: Deny All Services
+      description: Deny consent for every configured service (UC_UI.denyAllConsents).
+      operationId: uiDenyAll
+      responses:
+        '200': { description: All consents denied. }
+  /ui/update-services:
+    post:
+      tags: [Consent]
+      summary: Update Service Consents
+      description: Update consent state for a specific list of services (UC_UI.updateServices).
+      operationId: uiUpdateServices
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                services:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      id: { type: string }
+                      consent: { type: boolean }
+      responses:
+        '200': { description: Consent updated. }
+  /ui/services-base-info:
+    get:
+      tags: [Consent]
+      summary: Get Services Base Info
+      description: Return the configured services with current consent state.
+      operationId: uiGetServicesBaseInfo
+      responses:
+        '200': { description: Service list returned. }
+  /tcf/get-tc-data:
+    post:
+      tags: [TCF]
+      summary: Get TC Data
+      description: Invoke __tcfapi("getTCData", 2, callback) to retrieve the IAB TCF 2.3 consent payload.
+      operationId: tcfGetTCData
+      responses:
+        '200': { description: TCData returned. }
+  /tcf/add-event-listener:
+    post:
+      tags: [TCF]
+      summary: Add TCF Event Listener
+      description: Register a TCF event listener via __tcfapi("addEventListener").
+      operationId: tcfAddEventListener
+      responses:
+        '200': { description: Listener registered. }
+  /gpp/ping:
+    get:
+      tags: [GPP]
+      summary: Ping GPP
+      description: Invoke __gpp("ping") to check Global Privacy Platform readiness.
+      operationId: gppPing
+      responses:
+        '200': { description: GPP signal returned. }
+  /gpp/get-gpp-data:
+    get:
+      tags: [GPP]
+      summary: Get GPP Data
+      description: Retrieve the current Global Privacy Platform consent string.
+      operationId: gppGetGppData
+      responses:
+        '200': { description: GPP data returned. }
+  /consent-mode/update:
+    post:
+      tags: [Consent Mode]
+      summary: Update Google Consent Mode
+      description: Update Google Consent Mode v2 signals (ad_storage, analytics_storage, ad_user_data,
+        ad_personalization) based on current consent state.
+      operationId: consentModeUpdate
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                ad_storage: { type: string, enum: [granted, denied] }
+                analytics_storage: { type: string, enum: [granted, denied] }
+                ad_user_data: { type: string, enum: [granted, denied] }
+                ad_personalization: { type: string, enum: [granted, denied] }
+      responses:
+        '200': { description: Consent Mode signals updated. }

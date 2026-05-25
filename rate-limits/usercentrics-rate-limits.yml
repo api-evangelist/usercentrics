@@ -1,0 +1,54 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
+provider: Usercentrics
+providerId: usercentrics
+created: '2026-05-25'
+modified: '2026-05-25'
+reconciled: false
+tags:
+  - Privacy
+  - Consent
+  - CMP
+  - Rate Limiting
+  - Quotas
+description: Usercentrics does not publish per-API rate limits. Quotas are enforced as monthly entitlements
+  (sessions, daily active users, sGTM requests, Meta Signals events) attached to each plan rather than as
+  per-second request limits.
+notes: Sessions and DAU are the primary metering units. Server-Side Tagging and Meta Signals Gateway plans
+  meter request and event volume respectively. Tenants exceeding plan caps are upgraded or throttled per
+  contract.
+sources:
+  - https://usercentrics.com/pricing/
+  - https://docs.usercentrics.com/
+limits:
+  - name: Web CMP Sessions
+    scope: tenant
+    metric: sessions
+    limit: per-plan (1K to 1M+)
+    notes: Counted as monthly user sessions across configured domains.
+  - name: App CMP Daily Active Users
+    scope: tenant
+    metric: daily-active-users
+    limit: per-plan (up to 500K, then enterprise)
+    notes: Counted as distinct devices that contacted the SDK that day.
+  - name: Server-Side Tagging Requests
+    scope: tenant
+    metric: requests
+    limit: 20K / 500K / 3M / 10M per month
+    notes: sGTM request volume by plan.
+  - name: Meta Signals Gateway Events
+    scope: tenant
+    metric: events
+    limit: 20K / 500K / 3M / 10M per month
+    notes: Conversions API event volume by plan.
+policies:
+  - name: Backoff Strategy
+    description: SDKs already debounce consent writes; clients calling the CDN should implement exponential
+      backoff and honor any Retry-After header returned during incidents.
+  - name: Quota Overage
+    description: Quota overages are reconciled via plan upgrade or negotiated per Corporate / Premium contract;
+      Usercentrics does not publicly document hard cutoffs.
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

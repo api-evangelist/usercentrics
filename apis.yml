@@ -1,0 +1,248 @@
+aid: usercentrics
+url: https://raw.githubusercontent.com/api-evangelist/usercentrics/refs/heads/main/apis.yml
+name: Usercentrics
+kind: company
+description: Usercentrics is a Munich-based consent management platform (CMP) and privacy compliance
+  provider. Founded in 2017 and led by CEO Donna Dror, Usercentrics acquired Danish CMP Cookiebot
+  (Cybot) in September 2021 and acquired MCP Manager in January 2026. The platform serves 2.4M+
+  websites and apps across 195 countries, processing 8.8B+ monthly consents. Products span Web CMP,
+  App CMP, CTV CMP, Server-Side Tagging, Meta Signals Gateway, Preference Manager, Privacy Policy
+  Generator, Compliance Scanners, and MCP Manager for AI governance.
+image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Privacy
+  - Consent
+  - CMP
+  - Compliance
+  - GDPR
+  - CCPA
+  - TCF
+  - GPP
+  - Cookies
+  - AI Governance
+created: '2026-05-25'
+modified: '2026-05-25'
+specificationVersion: '0.19'
+apis:
+  - aid: usercentrics:app-cmp-sdk
+    name: Usercentrics App CMP SDK
+    description: Mobile and TV consent management SDK with native iOS (11+), tvOS (11+), Android (API 16+),
+      AndroidTV, Unity (2018.4+), Flutter (1.20+), and React Native (0.65+) support. Comprises
+      UsercentricsCore (backend logic) and UsercentricsUI (prebuilt banner). Supports GDPR, CCPA, LGPD,
+      and IAB TCF 2.0.
+    humanURL: https://docs.usercentrics.com/cmp_in_app_sdk/latest/
+    tags:
+      - SDK
+      - Mobile
+      - iOS
+      - Android
+      - Flutter
+      - React Native
+      - Unity
+      - TV
+      - Consent
+    properties:
+      - type: Documentation
+        url: https://docs.usercentrics.com/cmp_in_app_sdk/latest/
+      - type: APIReference
+        url: https://docs.usercentrics.com/cmp_in_app_sdk/latest/api/api_documentation/
+      - type: SDK
+        url: https://github.com/Usercentrics/flutter-sdk
+        name: Flutter SDK
+      - type: SDK
+        url: https://github.com/Usercentrics/react-native-sdk
+        name: React Native SDK
+      - type: SDK
+        url: https://github.com/Usercentrics/ios-sample
+        name: iOS Sample
+      - type: SDK
+        url: https://github.com/Usercentrics/android-sample
+        name: Android Sample
+      - type: OpenAPI
+        url: openapi/usercentrics-app-cmp-sdk-openapi.yml
+  - aid: usercentrics:web-cmp-v3
+    name: Usercentrics Web CMP (V3)
+    description: Browser-side consent management platform for websites. Exposes the UC_UI JavaScript API,
+      IAB __tcfapi (TCF 2.3), IAB __gpp (GPP), dataLayer events, and Google Consent Mode v2 / Microsoft UET
+      Consent Mode signals. Configurable through the Usercentrics Admin Interface and delivered via the
+      Usercentrics CDN.
+    humanURL: https://docs.usercentrics.com/cmp_v3/latest/
+    tags:
+      - Web
+      - JavaScript
+      - CMP
+      - TCF
+      - GPP
+      - Consent Mode
+    properties:
+      - type: Documentation
+        url: https://docs.usercentrics.com/cmp_v3/latest/
+      - type: OpenAPI
+        url: openapi/usercentrics-web-cmp-v3-openapi.yml
+  - aid: usercentrics:cookiebot-cmp
+    name: Cookiebot CMP
+    description: Cookiebot consent management platform (a Usercentrics company since the September 2021
+      Cybot acquisition). Provides a JavaScript SDK (Cookiebot global, show()/hide()/renew()/getScript()/
+      runScripts()/withdraw()/submitCustomConsent()), CookiebotOnConsentReady / OnAccept / OnDecline
+      events, server-side CookieConsent cookie integration (C#, PHP, VB samples), and the patented monthly
+      site scanner.
+    humanURL: https://www.cookiebot.com/en/developer/
+    tags:
+      - Cookies
+      - Scanner
+      - JavaScript
+      - GDPR
+      - GTM
+    properties:
+      - type: Documentation
+        url: https://www.cookiebot.com/en/developer/
+      - type: Documentation
+        url: https://www.cookiebot.com/en/help/
+      - type: Support
+        url: https://support.cookiebot.com/hc/en-us/
+      - type: OpenAPI
+        url: openapi/usercentrics-cookiebot-cmp-openapi.yml
+  - aid: usercentrics:server-side-tagging
+    name: Usercentrics Server-Side Tagging (sGTM)
+    description: Hosted server-side Google Tag Manager service for first-party data collection, consent
+      enforcement, and tag execution off the browser. Includes Meta Signals Gateway for the Meta
+      Conversions API and consent-aware event forwarding.
+    humanURL: https://usercentrics.com/integrations/
+    tags:
+      - Server-Side
+      - GTM
+      - Tagging
+      - Meta
+      - Conversions API
+    properties:
+      - type: Documentation
+        url: https://usercentrics.com/integrations/
+common:
+  - type: Website
+    url: https://usercentrics.com/
+  - type: Portal
+    url: https://docs.usercentrics.com/
+  - type: SignUp
+    url: https://usercentrics.com/free-trial/
+  - type: Pricing
+    url: https://usercentrics.com/pricing/
+  - type: Plans
+    url: plans/usercentrics-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/usercentrics-rate-limits.yml
+  - type: FinOps
+    url: finops/usercentrics-finops.yml
+  - type: Blog
+    url: https://usercentrics.com/knowledge-hub/
+  - type: Support
+    url: https://support.usercentrics.com/
+  - type: PrivacyPolicy
+    url: https://usercentrics.com/privacy-policy/
+  - type: TermsOfService
+    url: https://usercentrics.com/terms-and-conditions/
+  - type: Documentation
+    name: Legal Documents
+    url: https://usercentrics.com/legal-documents/
+  - type: GitHubOrganization
+    url: https://github.com/Usercentrics
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/usercentrics/
+  - type: Documentation
+    name: Cookiebot
+    url: https://www.cookiebot.com/en/
+  - type: Features
+    data:
+      - name: Web CMP
+        description: Browser-side consent management for GDPR, CCPA, TCF 2.3, GPP, and DMA.
+      - name: App CMP
+        description: Native and cross-platform mobile consent SDKs (iOS, Android, Flutter, React Native, Unity).
+      - name: CTV CMP
+        description: Connected-TV and OTT consent SDKs for tvOS and AndroidTV.
+      - name: Cookiebot Scanner
+        description: Patented monthly website scanner that auto-detects cookies and trackers.
+      - name: Server-Side Tagging
+        description: Hosted sGTM for consent-aware first-party data collection.
+      - name: Meta Signals Gateway
+        description: Server-side Meta Conversions API forwarding aligned with consent.
+      - name: Preference Manager
+        description: First-party preference center for granular subscriber data.
+      - name: Privacy Policy Generator
+        description: Automated, multi-language, multi-regulation privacy policy authoring.
+      - name: Compliance Scanners
+        description: Web and App scanners for ongoing compliance monitoring.
+      - name: MCP Manager
+        description: Governance platform for Model Context Protocol data access by AI agents.
+      - name: Google Consent Mode v2
+        description: Native integration with Google's consent signaling for Ads, Analytics, and GTM.
+      - name: IAB TCF 2.3
+        description: Full IAB Transparency and Consent Framework support for ad-tech consent strings.
+      - name: IAB GPP
+        description: Global Privacy Platform support for multi-jurisdiction consent signaling.
+      - name: Multi-Language
+        description: 47+ supported languages with geotargeted banners.
+  - type: UseCases
+    data:
+      - name: Media and Publishing
+        description: Consent for ad-funded media operating across multiple regulations.
+      - name: Retail and Ecommerce
+        description: Consent-aware tagging for first-party conversion measurement.
+      - name: Banking and Finance
+        description: Granular consent records and audit trails for regulated industries.
+      - name: Healthcare
+        description: HIPAA-ready consent flows for patient-facing properties.
+      - name: Gaming
+        description: TCF-compliant consent in mobile games and Unity-based titles.
+      - name: Education
+        description: Compliant consent collection for EdTech platforms and learner data.
+      - name: Automotive
+        description: In-car and connected-vehicle consent capture.
+      - name: Travel and Hospitality
+        description: Multi-region consent for global booking and loyalty platforms.
+      - name: AI Governance
+        description: MCP Manager governance of agent access to enterprise data.
+  - type: Integrations
+    data:
+      - name: WordPress
+      - name: Shopify
+      - name: Wix
+      - name: HubSpot
+      - name: Square
+      - name: Duda
+      - name: Shopware
+      - name: eRecht24
+      - name: Joomla
+      - name: Webflow
+      - name: Squarespace
+      - name: GoDaddy
+      - name: Drupal
+      - name: TYPO3
+      - name: Magento
+      - name: WooCommerce
+      - name: Google Tag Manager
+      - name: Adobe Launch
+      - name: Google Ads (Consent Mode v2)
+      - name: Microsoft Advertising (UET Consent Mode)
+      - name: Meta Conversions API
+      - name: Flutter
+      - name: Unity Ads
+      - name: Adjust
+      - name: AppLovin
+      - name: ironSource
+      - name: Crashlytics
+      - name: Chartboost
+      - name: MineOS
+      - name: Kameleoon
+      - name: Optimizely
+  - type: Solutions
+    data:
+      - name: Cookiebot Core
+        description: Self-serve consent for solopreneurs and emerging businesses.
+      - name: Usercentrics Advanced
+        description: Enterprise CMP with advanced customization, A/B testing, and analytics.
+      - name: TV Premium
+        description: Custom-priced offering for Connected TV and OTT applications.
+      - name: App Premium
+        description: Enterprise App CMP with API access, white labeling, and dedicated CSE.
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com

@@ -1,0 +1,103 @@
+openapi: 3.1.0
+info:
+  title: Cookiebot CMP API
+  description: |
+    Logical OpenAPI representation of the Cookiebot consent management platform browser API
+    (Cookiebot global object) and the CookieConsent cookie consumed by server-side code in C#, PHP,
+    and VB. Cookiebot is a Usercentrics company following the September 2021 Cybot acquisition.
+
+    Reference: https://www.cookiebot.com/en/developer/
+  version: "1.0.0"
+  contact:
+    name: Cookiebot Developer Documentation
+    url: https://www.cookiebot.com/en/developer/
+servers:
+  - url: https://consent.cookiebot.com
+    description: Cookiebot consent delivery CDN.
+tags:
+  - name: Dialog
+  - name: Consent
+  - name: Scanner
+paths:
+  /dialog/show:
+    post:
+      tags: [Dialog]
+      summary: Show Cookiebot Dialog
+      description: Display the Cookiebot consent dialog (Cookiebot.show()).
+      operationId: cookiebotShow
+      responses:
+        '200': { description: Dialog shown. }
+  /dialog/hide:
+    post:
+      tags: [Dialog]
+      summary: Hide Cookiebot Dialog
+      description: Hide the Cookiebot consent dialog (Cookiebot.hide()).
+      operationId: cookiebotHide
+      responses:
+        '200': { description: Dialog hidden. }
+  /dialog/renew:
+    post:
+      tags: [Dialog]
+      summary: Renew Consent
+      description: Force re-prompt for consent (Cookiebot.renew()).
+      operationId: cookiebotRenew
+      responses:
+        '200': { description: Consent re-prompted. }
+  /consent/withdraw:
+    post:
+      tags: [Consent]
+      summary: Withdraw Consent
+      description: Withdraw all consent for the current user (Cookiebot.withdraw()).
+      operationId: cookiebotWithdraw
+      responses:
+        '200': { description: Consent withdrawn. }
+  /consent/submit-custom:
+    post:
+      tags: [Consent]
+      summary: Submit Custom Consent
+      description: Submit a custom consent decision (Cookiebot.submitCustomConsent).
+      operationId: cookiebotSubmitCustomConsent
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                preferences: { type: boolean }
+                statistics: { type: boolean }
+                marketing: { type: boolean }
+      responses:
+        '200': { description: Custom consent submitted. }
+  /consent/state:
+    get:
+      tags: [Consent]
+      summary: Get Consent State
+      description: Read Cookiebot.consent (necessary, preferences, statistics, marketing) flags.
+      operationId: cookiebotGetConsent
+      responses:
+        '200': { description: Consent flags returned. }
+  /scripts/get:
+    get:
+      tags: [Consent]
+      summary: Get Script
+      description: Retrieve a script blocked by Cookiebot pending consent (Cookiebot.getScript).
+      operationId: cookiebotGetScript
+      responses:
+        '200': { description: Script retrieved. }
+  /scripts/run:
+    post:
+      tags: [Consent]
+      summary: Run Scripts
+      description: Execute scripts that have been gated on consent (Cookiebot.runScripts).
+      operationId: cookiebotRunScripts
+      responses:
+        '200': { description: Scripts executed. }
+  /scanner/last-report:
+    get:
+      tags: [Scanner]
+      summary: Get Last Scanner Report
+      description: Retrieve the most recent Cookiebot website scan results.
+      operationId: cookiebotLastReport
+      responses:
+        '200': { description: Last scan report returned. }

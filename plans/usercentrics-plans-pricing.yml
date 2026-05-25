@@ -1,0 +1,361 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Usercentrics
+providerId: usercentrics
+created: '2026-05-25'
+modified: '2026-05-25'
+reconciled: false
+tags:
+  - Privacy
+  - Consent
+  - CMP
+  - Plans
+description: Usercentrics publishes session-based public pricing for Web CMP and Server-Side Tagging,
+  daily-active-user pricing for App CMP, and custom pricing for Corporate, TV Premium, and App Premium.
+notes: All paid plans offer a 14-day free trial; no credit card required. EUR prices captured from the
+  public pricing page.
+sources:
+  - https://usercentrics.com/pricing/
+plans:
+  - id: web-cmp-free
+    name: Web CMP Free
+    type: free
+    description: Single-domain, single-regulation Web CMP with 1,000 sessions/month.
+    entries:
+      - label: Sessions
+        name: sessions
+        type: flat
+        metric: sessions
+        limit: 1000
+        timeFrame: monthly
+        geo: global
+        unit: 1
+        price: 0
+        currency: EUR
+        userMultiplied: false
+    elements:
+      - name: 1 domain
+      - name: 1 regulation
+      - name: 2 languages
+      - name: Core consent banner features
+  - id: web-cmp-essential
+    name: Web CMP Essential
+    type: paid
+    description: Entry-tier Web CMP with basic customization and dashboards.
+    entries:
+      - label: Monthly subscription
+        name: subscription
+        type: flat
+        metric: month
+        limit: 1500
+        timeFrame: monthly
+        geo: global
+        unit: 1
+        price: 7
+        currency: EUR
+        userMultiplied: false
+    elements:
+      - name: 1,500 sessions/month
+      - name: Basic banner customization
+      - name: Consent activity dashboards
+  - id: web-cmp-plus
+    name: Web CMP Plus
+    type: paid
+    description: Multi-regulation Web CMP for growing sites.
+    entries:
+      - label: Monthly subscription
+        name: subscription
+        type: flat
+        metric: month
+        limit: 3000
+        timeFrame: monthly
+        geo: global
+        unit: 1
+        price: 15
+        currency: EUR
+        userMultiplied: false
+    elements:
+      - name: 3,000 sessions/month
+      - name: Unlimited regulations
+      - name: 5 languages
+      - name: Geolocation rules
+  - id: web-cmp-pro
+    name: Web CMP Pro
+    type: paid
+    description: Multi-domain CMP with brand integration and analytics.
+    entries:
+      - label: Monthly subscription
+        name: subscription
+        type: flat
+        metric: month
+        limit: 15000
+        timeFrame: monthly
+        geo: global
+        unit: 1
+        price: 30
+        currency: EUR
+        userMultiplied: false
+    elements:
+      - name: 15,000 sessions/month
+      - name: 3 domains
+      - name: 60 languages
+      - name: Brand integration
+      - name: Detailed analytics
+  - id: web-cmp-business
+    name: Web CMP Business
+    type: paid
+    description: Higher-volume Web CMP with comparative interaction analytics.
+    entries:
+      - label: Monthly subscription
+        name: subscription
+        type: flat
+        metric: month
+        limit: 50000
+        timeFrame: monthly
+        geo: global
+        unit: 1
+        price: 50
+        currency: EUR
+        userMultiplied: false
+    elements:
+      - name: 50,000 sessions/month
+      - name: 10 domains
+      - name: Full customization
+      - name: Comparative Interaction Analytics
+  - id: web-cmp-corporate
+    name: Web CMP Corporate
+    type: enterprise
+    description: Enterprise tier for sites with 1M+ monthly sessions; A/B testing and dedicated CSM included.
+    entries:
+      - label: Subscription
+        name: subscription
+        type: flat
+        metric: month
+        limit: -1
+        timeFrame: monthly
+        geo: global
+        unit: 1
+        price: contact sales
+        userMultiplied: false
+    elements:
+      - name: Unlimited domains
+      - name: 1M+ sessions
+      - name: Dedicated success manager
+      - name: A/B testing included
+  - id: app-cmp-advanced
+    name: App CMP Advanced
+    type: paid
+    description: Mobile CMP with unlimited apps/configurations, A/B testing, and analytics, scaled by daily active users.
+    entries:
+      - label: Monthly subscription
+        name: subscription
+        type: flat
+        metric: daily-active-users
+        limit: 500000
+        timeFrame: monthly
+        geo: global
+        unit: 1
+        price: 50-999
+        currency: EUR
+        userMultiplied: false
+    elements:
+      - name: Up to 500K DAU
+      - name: Unlimited apps and configurations
+      - name: A/B testing
+      - name: Analytics
+  - id: app-cmp-premium
+    name: App CMP Premium
+    type: enterprise
+    description: Enterprise App CMP for 500K+ DAU with API access, white labeling, and dedicated CSE.
+    entries:
+      - label: Subscription
+        name: subscription
+        type: flat
+        metric: daily-active-users
+        limit: -1
+        timeFrame: monthly
+        geo: global
+        unit: 1
+        price: contact sales
+        userMultiplied: false
+    elements:
+      - name: 500K+ DAU
+      - name: API access
+      - name: White labeling
+      - name: Dedicated Customer Success Executive
+  - id: tv-premium
+    name: TV Premium
+    type: enterprise
+    description: Custom-priced Connected TV / OTT CMP with unlimited configurations.
+    entries:
+      - label: Subscription
+        name: subscription
+        type: flat
+        metric: configurations
+        limit: -1
+        timeFrame: monthly
+        geo: global
+        unit: 1
+        price: contact sales
+        userMultiplied: false
+  - id: privacy-policy-generator-free
+    name: Privacy Policy Generator Free
+    type: free
+    description: Free single-policy GDPR generator in English.
+    entries:
+      - label: Policies
+        name: policies
+        type: flat
+        metric: policies
+        limit: 1
+        timeFrame: monthly
+        geo: global
+        unit: 1
+        price: 0
+        currency: EUR
+        userMultiplied: false
+  - id: privacy-policy-generator-pro
+    name: Privacy Policy Generator Pro
+    type: paid
+    description: Unlimited automated multi-regulation privacy policies in 4 languages.
+    entries:
+      - label: Monthly subscription
+        name: subscription
+        type: flat
+        metric: month
+        limit: -1
+        timeFrame: monthly
+        geo: global
+        unit: 1
+        price: 2
+        currency: EUR
+        userMultiplied: false
+  - id: sgtm-starter
+    name: Server-Side Tagging Starter
+    type: free
+    description: 20,000 sGTM requests/month.
+    entries:
+      - label: Requests
+        name: requests
+        type: flat
+        metric: requests
+        limit: 20000
+        timeFrame: monthly
+        geo: global
+        unit: 1
+        price: 0
+        currency: EUR
+        userMultiplied: false
+  - id: sgtm-growth
+    name: Server-Side Tagging Growth
+    type: paid
+    description: 500,000 sGTM requests/month.
+    entries:
+      - label: Monthly subscription
+        name: subscription
+        type: flat
+        metric: requests
+        limit: 500000
+        timeFrame: monthly
+        geo: global
+        unit: 1
+        price: 16
+        currency: EUR
+        userMultiplied: false
+  - id: sgtm-scale
+    name: Server-Side Tagging Scale
+    type: paid
+    description: 3,000,000 sGTM requests/month.
+    entries:
+      - label: Monthly subscription
+        name: subscription
+        type: flat
+        metric: requests
+        limit: 3000000
+        timeFrame: monthly
+        geo: global
+        unit: 1
+        price: 49
+        currency: EUR
+        userMultiplied: false
+  - id: sgtm-performance
+    name: Server-Side Tagging Performance
+    type: paid
+    description: 10,000,000 sGTM requests/month.
+    entries:
+      - label: Monthly subscription
+        name: subscription
+        type: flat
+        metric: requests
+        limit: 10000000
+        timeFrame: monthly
+        geo: global
+        unit: 1
+        price: 99
+        currency: EUR
+        userMultiplied: false
+  - id: meta-signals-gateway-starter
+    name: Meta Signals Gateway Starter
+    type: free
+    description: 20,000 events/month via Meta Signals Gateway.
+    entries:
+      - label: Events
+        name: events
+        type: flat
+        metric: events
+        limit: 20000
+        timeFrame: monthly
+        geo: global
+        unit: 1
+        price: 0
+        currency: EUR
+        userMultiplied: false
+  - id: meta-signals-gateway-growth
+    name: Meta Signals Gateway Growth
+    type: paid
+    entries:
+      - label: Monthly subscription
+        name: subscription
+        type: flat
+        metric: events
+        limit: 500000
+        timeFrame: monthly
+        geo: global
+        unit: 1
+        price: 11
+        currency: EUR
+        userMultiplied: false
+  - id: meta-signals-gateway-scale
+    name: Meta Signals Gateway Scale
+    type: paid
+    entries:
+      - label: Monthly subscription
+        name: subscription
+        type: flat
+        metric: events
+        limit: 3000000
+        timeFrame: monthly
+        geo: global
+        unit: 1
+        price: 40
+        currency: EUR
+        userMultiplied: false
+  - id: meta-signals-gateway-performance
+    name: Meta Signals Gateway Performance
+    type: paid
+    entries:
+      - label: Monthly subscription
+        name: subscription
+        type: flat
+        metric: events
+        limit: 10000000
+        timeFrame: monthly
+        geo: global
+        unit: 1
+        price: 80
+        currency: EUR
+        userMultiplied: false
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
