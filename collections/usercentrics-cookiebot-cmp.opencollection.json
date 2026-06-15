@@ -1,0 +1,137 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Cookiebot CMP API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Dialog",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Show Cookiebot Dialog",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://consent.cookiebot.com/dialog/show"
+          },
+          "docs": "Display the Cookiebot consent dialog (Cookiebot.show())."
+        },
+        {
+          "info": {
+            "name": "Hide Cookiebot Dialog",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://consent.cookiebot.com/dialog/hide"
+          },
+          "docs": "Hide the Cookiebot consent dialog (Cookiebot.hide())."
+        },
+        {
+          "info": {
+            "name": "Renew Consent",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://consent.cookiebot.com/dialog/renew"
+          },
+          "docs": "Force re-prompt for consent (Cookiebot.renew())."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Consent",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Withdraw Consent",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://consent.cookiebot.com/consent/withdraw"
+          },
+          "docs": "Withdraw all consent for the current user (Cookiebot.withdraw())."
+        },
+        {
+          "info": {
+            "name": "Submit Custom Consent",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://consent.cookiebot.com/consent/submit-custom",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Submit a custom consent decision (Cookiebot.submitCustomConsent)."
+        },
+        {
+          "info": {
+            "name": "Get Consent State",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://consent.cookiebot.com/consent/state"
+          },
+          "docs": "Read Cookiebot.consent (necessary, preferences, statistics, marketing) flags."
+        },
+        {
+          "info": {
+            "name": "Get Script",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://consent.cookiebot.com/scripts/get"
+          },
+          "docs": "Retrieve a script blocked by Cookiebot pending consent (Cookiebot.getScript)."
+        },
+        {
+          "info": {
+            "name": "Run Scripts",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://consent.cookiebot.com/scripts/run"
+          },
+          "docs": "Execute scripts that have been gated on consent (Cookiebot.runScripts)."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Scanner",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Last Scanner Report",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://consent.cookiebot.com/scanner/last-report"
+          },
+          "docs": "Retrieve the most recent Cookiebot website scan results."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

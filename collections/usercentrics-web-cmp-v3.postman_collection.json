@@ -1,0 +1,782 @@
+{
+  "item": [
+    {
+      "id": "063496be-f009-4ac6-8c71-ed1564b83102",
+      "name": "UI",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "9583a02d-0336-4055-be10-f755a875b58c",
+          "name": "Show First Layer",
+          "request": {
+            "name": "Show First Layer",
+            "description": {
+              "content": "Programmatically display the first-layer consent banner (UC_UI.showFirstLayer).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "ui",
+                "show-first-layer"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "111bdb89-95ed-4778-aea0-122babfaa169",
+              "name": "Banner shown.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "ui",
+                    "show-first-layer"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c330664c-f941-4aa7-b670-b059eebbe15d",
+          "name": "Show Second Layer",
+          "request": {
+            "name": "Show Second Layer",
+            "description": {
+              "content": "Open the second-layer preference center (UC_UI.showSecondLayer).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "ui",
+                "show-second-layer"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0f52ba49-2f0a-42c4-a41c-e921e82e912f",
+              "name": "Preference center shown.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "ui",
+                    "show-second-layer"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "5453d01d-70ae-4448-97f4-b2c7ec7295f8",
+      "name": "Consent",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "fa845bce-cc32-4572-ac29-afe18c999c7a",
+          "name": "Accept All Services",
+          "request": {
+            "name": "Accept All Services",
+            "description": {
+              "content": "Grant consent for every configured service (UC_UI.acceptAllConsents).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "ui",
+                "accept-all"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6765a984-8cb9-48af-910c-d242dfa12d33",
+              "name": "All consents granted.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "ui",
+                    "accept-all"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "46fcda46-c9e0-4d47-aca6-c8f622dcc527",
+          "name": "Deny All Services",
+          "request": {
+            "name": "Deny All Services",
+            "description": {
+              "content": "Deny consent for every configured service (UC_UI.denyAllConsents).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "ui",
+                "deny-all"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1a209ba9-3658-473b-abe5-2acb0042e9b7",
+              "name": "All consents denied.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "ui",
+                    "deny-all"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6c686531-809d-4d1e-b11a-6e8c2d0f5cd4",
+          "name": "Update Service Consents",
+          "request": {
+            "name": "Update Service Consents",
+            "description": {
+              "content": "Update consent state for a specific list of services (UC_UI.updateServices).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "ui",
+                "update-services"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"services\": [\n    {\n      \"id\": \"<string>\",\n      \"consent\": \"<boolean>\"\n    },\n    {\n      \"id\": \"<string>\",\n      \"consent\": \"<boolean>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "7dec9e3b-9638-4ab7-9b3e-5d08b26bbb8d",
+              "name": "Consent updated.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "ui",
+                    "update-services"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"services\": [\n    {\n      \"id\": \"<string>\",\n      \"consent\": \"<boolean>\"\n    },\n    {\n      \"id\": \"<string>\",\n      \"consent\": \"<boolean>\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8c92c23f-a55a-43a4-893e-8a0391d2c8c8",
+          "name": "Get Services Base Info",
+          "request": {
+            "name": "Get Services Base Info",
+            "description": {
+              "content": "Return the configured services with current consent state.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "ui",
+                "services-base-info"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "de47bc6d-f351-46f0-ab3c-7fabf7f1c0ad",
+              "name": "Service list returned.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "ui",
+                    "services-base-info"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "6e6a687d-d308-4205-bd09-9452ef14d9f9",
+      "name": "TCF",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "e815ad67-abc8-465c-8bf0-6fd1c69b91ed",
+          "name": "Get TC Data",
+          "request": {
+            "name": "Get TC Data",
+            "description": {
+              "content": "Invoke __tcfapi(\"getTCData\", 2, callback) to retrieve the IAB TCF 2.3 consent payload.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "tcf",
+                "get-tc-data"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "97baf6ff-6d2f-4b6b-ba83-476dc656455c",
+              "name": "TCData returned.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tcf",
+                    "get-tc-data"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "36d4646b-609b-4c51-bb16-9bce91f6a315",
+          "name": "Add TCF Event Listener",
+          "request": {
+            "name": "Add TCF Event Listener",
+            "description": {
+              "content": "Register a TCF event listener via __tcfapi(\"addEventListener\").",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "tcf",
+                "add-event-listener"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "4ca17484-8e66-4e60-b428-f376f634f440",
+              "name": "Listener registered.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "tcf",
+                    "add-event-listener"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "1ffec997-c1d2-40a0-b383-d18fdabf7980",
+      "name": "GPP",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "80bd009d-6678-4772-8c31-89adb5e048f7",
+          "name": "Ping GPP",
+          "request": {
+            "name": "Ping GPP",
+            "description": {
+              "content": "Invoke __gpp(\"ping\") to check Global Privacy Platform readiness.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "gpp",
+                "ping"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "64311d46-f6e4-4e62-8df6-0aeb78890411",
+              "name": "GPP signal returned.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "gpp",
+                    "ping"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8874ae0b-2ca1-444b-ac43-9db15dcc346b",
+          "name": "Get GPP Data",
+          "request": {
+            "name": "Get GPP Data",
+            "description": {
+              "content": "Retrieve the current Global Privacy Platform consent string.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "gpp",
+                "get-gpp-data"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "edc70988-7407-494c-b11a-c49c6a0a0d6b",
+              "name": "GPP data returned.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "gpp",
+                    "get-gpp-data"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "23617306-b44f-4e92-a11c-aef5bbe788fc",
+      "name": "Consent Mode",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "fbc83700-59c5-4d62-94ab-bb11e1bb3745",
+          "name": "Update Google Consent Mode",
+          "request": {
+            "name": "Update Google Consent Mode",
+            "description": {
+              "content": "Update Google Consent Mode v2 signals (ad_storage, analytics_storage, ad_user_data, ad_personalization) based on current consent state.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "consent-mode",
+                "update"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"ad_storage\": \"<string>\",\n  \"analytics_storage\": \"<string>\",\n  \"ad_user_data\": \"<string>\",\n  \"ad_personalization\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "48573905-145f-46f4-9c12-2a2c4fc28aa8",
+              "name": "Consent Mode signals updated.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "consent-mode",
+                    "update"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"ad_storage\": \"<string>\",\n  \"analytics_storage\": \"<string>\",\n  \"ad_user_data\": \"<string>\",\n  \"ad_personalization\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://app.usercentrics.eu",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "eae84844-d686-4000-ad49-a57b27fb62c8",
+    "name": "Usercentrics Web CMP V3 API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Browser-side JavaScript surface of the Usercentrics Web CMP V3 modeled as logical HTTP\noperations. Covers the UC_UI control API, IAB TCF 2.3 __tcfapi, IAB GPP __gpp, and Google\nConsent Mode v2 signals delivered through the Usercentrics CDN script.\n\nReference: https://docs.usercentrics.com/cmp_v3/latest/\n\n\nContact Support:\n Name: Usercentrics Documentation",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "repo": "usercentrics",
+  "feeds": [
+    {
+      "source": "https://usercentrics.com/knowledge-hub/",
+      "feed_url": "https://usercentrics.com/feed/",
+      "title": "Consent Management Platform (CMP) Usercentrics",
+      "saved": 0,
+      "method": "none"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-06-07T00:00:00Z"
+}

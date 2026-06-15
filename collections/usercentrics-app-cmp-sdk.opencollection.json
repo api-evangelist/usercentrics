@@ -1,0 +1,157 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Usercentrics App CMP SDK API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Lifecycle",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Configure The SDK",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "sdk://usercentrics.app/configure",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Initialize the App CMP SDK with a Settings ID, runtime options, and ruleset."
+        },
+        {
+          "info": {
+            "name": "Check Readiness",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "sdk://usercentrics.app/is-ready"
+          },
+          "docs": "Returns once the SDK is fully initialized and ready to read or collect consent."
+        },
+        {
+          "info": {
+            "name": "Restore User Session",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "sdk://usercentrics.app/restore-user-session",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Restore an existing consent session from a controller ID across devices."
+        },
+        {
+          "info": {
+            "name": "Reset Consent State",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "sdk://usercentrics.app/reset"
+          },
+          "docs": "Clear all stored consent state for the current user."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Consent",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get CMP Data",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "sdk://usercentrics.app/cmp-data"
+          },
+          "docs": "Retrieve the active CMP configuration including service list, categories, and copy."
+        },
+        {
+          "info": {
+            "name": "Get Consents",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "sdk://usercentrics.app/consents"
+          },
+          "docs": "Return the current per-service consent state stored on device."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "TCF",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get TCF Data",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "sdk://usercentrics.app/tcf-data"
+          },
+          "docs": "Return the IAB TCF 2.3 string and per-purpose/per-vendor consent state."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "CCPA",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get CCPA Data",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "sdk://usercentrics.app/ccpa-data"
+          },
+          "docs": "Return the CCPA Do-Not-Sell signal for the current user."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Controller",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Controller ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "sdk://usercentrics.app/controller-id"
+          },
+          "docs": "Return the Usercentrics controller ID identifying the current user's consent record."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

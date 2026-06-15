@@ -1,0 +1,617 @@
+{
+  "item": [
+    {
+      "id": "8e7d6a52-60ee-405e-a655-c2fda4420147",
+      "name": "Dialog",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "377533f5-6598-4089-9f1c-ade7eaa2b058",
+          "name": "Show Cookiebot Dialog",
+          "request": {
+            "name": "Show Cookiebot Dialog",
+            "description": {
+              "content": "Display the Cookiebot consent dialog (Cookiebot.show()).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "dialog",
+                "show"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7c95210f-e2fc-433f-8351-f6a93561614e",
+              "name": "Dialog shown.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "dialog",
+                    "show"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8ae493e0-b0d7-40d8-ada8-15612897efbc",
+          "name": "Hide Cookiebot Dialog",
+          "request": {
+            "name": "Hide Cookiebot Dialog",
+            "description": {
+              "content": "Hide the Cookiebot consent dialog (Cookiebot.hide()).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "dialog",
+                "hide"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "de42c9b4-5402-4c00-bc31-6d2a6e752d5e",
+              "name": "Dialog hidden.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "dialog",
+                    "hide"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "6da96783-410a-4e05-9f4c-4236ad403732",
+          "name": "Renew Consent",
+          "request": {
+            "name": "Renew Consent",
+            "description": {
+              "content": "Force re-prompt for consent (Cookiebot.renew()).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "dialog",
+                "renew"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "694d9636-2c64-4cd1-bd0b-aab896b40212",
+              "name": "Consent re-prompted.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "dialog",
+                    "renew"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "5c5bfadf-5560-4056-af46-a6475bc007fd",
+      "name": "Consent",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "6f25137e-45da-407d-9884-761751342da7",
+          "name": "Withdraw Consent",
+          "request": {
+            "name": "Withdraw Consent",
+            "description": {
+              "content": "Withdraw all consent for the current user (Cookiebot.withdraw()).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "consent",
+                "withdraw"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e675e9fc-2957-49cd-8f7a-c10d30a05324",
+              "name": "Consent withdrawn.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "consent",
+                    "withdraw"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "66caf60d-314c-443b-9b92-03ddee4e00e0",
+          "name": "Submit Custom Consent",
+          "request": {
+            "name": "Submit Custom Consent",
+            "description": {
+              "content": "Submit a custom consent decision (Cookiebot.submitCustomConsent).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "consent",
+                "submit-custom"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"preferences\": \"<boolean>\",\n  \"statistics\": \"<boolean>\",\n  \"marketing\": \"<boolean>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "71255fac-280d-4c6e-b3e3-5218c90fb74b",
+              "name": "Custom consent submitted.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "consent",
+                    "submit-custom"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"preferences\": \"<boolean>\",\n  \"statistics\": \"<boolean>\",\n  \"marketing\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a62f0551-f6fc-4ecf-bff3-19d65571f87a",
+          "name": "Get Consent State",
+          "request": {
+            "name": "Get Consent State",
+            "description": {
+              "content": "Read Cookiebot.consent (necessary, preferences, statistics, marketing) flags.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "consent",
+                "state"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "62916194-f6a4-47c6-84c3-2b29931ec068",
+              "name": "Consent flags returned.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "consent",
+                    "state"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8dd2402a-59a3-4a38-932e-d82b44372db9",
+          "name": "Get Script",
+          "request": {
+            "name": "Get Script",
+            "description": {
+              "content": "Retrieve a script blocked by Cookiebot pending consent (Cookiebot.getScript).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "scripts",
+                "get"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "f12cef3c-218a-429f-afd8-bd00c74b09fe",
+              "name": "Script retrieved.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "scripts",
+                    "get"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "afe1c8df-5399-4a95-a544-3d6596afaa0d",
+          "name": "Run Scripts",
+          "request": {
+            "name": "Run Scripts",
+            "description": {
+              "content": "Execute scripts that have been gated on consent (Cookiebot.runScripts).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "scripts",
+                "run"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8a5aef6b-941f-4a1c-968f-db734351cd7a",
+              "name": "Scripts executed.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "scripts",
+                    "run"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    },
+    {
+      "id": "0f7d8ff9-7542-4453-863a-e8046935b2cf",
+      "name": "Scanner",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "ce11af4b-bab4-42ae-acfa-b27ab90251f3",
+          "name": "Get Last Scanner Report",
+          "request": {
+            "name": "Get Last Scanner Report",
+            "description": {
+              "content": "Retrieve the most recent Cookiebot website scan results.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "scanner",
+                "last-report"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "7552de42-fb30-42a2-9362-0776e274932e",
+              "name": "Last scan report returned.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "scanner",
+                    "last-report"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://consent.cookiebot.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "e9cb5709-d0f2-42ca-8cd5-f6ee52b8d081",
+    "name": "Cookiebot CMP API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Logical OpenAPI representation of the Cookiebot consent management platform browser API\n(Cookiebot global object) and the CookieConsent cookie consumed by server-side code in C#, PHP,\nand VB. Cookiebot is a Usercentrics company following the September 2021 Cybot acquisition.\n\nReference: https://www.cookiebot.com/en/developer/\n\n\nContact Support:\n Name: Cookiebot Developer Documentation",
+      "type": "text/plain"
+    }
+  }
+}

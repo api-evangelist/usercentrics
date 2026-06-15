@@ -1,0 +1,179 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Usercentrics Web CMP V3 API",
+    "version": "3.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "UI",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Show First Layer",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.usercentrics.eu/ui/show-first-layer"
+          },
+          "docs": "Programmatically display the first-layer consent banner (UC_UI.showFirstLayer)."
+        },
+        {
+          "info": {
+            "name": "Show Second Layer",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.usercentrics.eu/ui/show-second-layer"
+          },
+          "docs": "Open the second-layer preference center (UC_UI.showSecondLayer)."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Consent",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Accept All Services",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.usercentrics.eu/ui/accept-all"
+          },
+          "docs": "Grant consent for every configured service (UC_UI.acceptAllConsents)."
+        },
+        {
+          "info": {
+            "name": "Deny All Services",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.usercentrics.eu/ui/deny-all"
+          },
+          "docs": "Deny consent for every configured service (UC_UI.denyAllConsents)."
+        },
+        {
+          "info": {
+            "name": "Update Service Consents",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.usercentrics.eu/ui/update-services",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update consent state for a specific list of services (UC_UI.updateServices)."
+        },
+        {
+          "info": {
+            "name": "Get Services Base Info",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.usercentrics.eu/ui/services-base-info"
+          },
+          "docs": "Return the configured services with current consent state."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "TCF",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get TC Data",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.usercentrics.eu/tcf/get-tc-data"
+          },
+          "docs": "Invoke __tcfapi(\"getTCData\", 2, callback) to retrieve the IAB TCF 2.3 consent payload."
+        },
+        {
+          "info": {
+            "name": "Add TCF Event Listener",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.usercentrics.eu/tcf/add-event-listener"
+          },
+          "docs": "Register a TCF event listener via __tcfapi(\"addEventListener\")."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "GPP",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Ping GPP",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.usercentrics.eu/gpp/ping"
+          },
+          "docs": "Invoke __gpp(\"ping\") to check Global Privacy Platform readiness."
+        },
+        {
+          "info": {
+            "name": "Get GPP Data",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.usercentrics.eu/gpp/get-gpp-data"
+          },
+          "docs": "Retrieve the current Global Privacy Platform consent string."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Consent Mode",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Update Google Consent Mode",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.usercentrics.eu/consent-mode/update",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update Google Consent Mode v2 signals (ad_storage, analytics_storage, ad_user_data, ad_personalization) based on current consent state."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
