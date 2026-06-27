@@ -3,12 +3,13 @@
   "feeds": [
     {
       "source": "https://usercentrics.com/knowledge-hub/",
-      "feed_url": "https://usercentrics.com/feed/",
+      "feed_url": "https://usercentrics.com/knowledge-hub/",
       "title": "Consent Management Platform (CMP) Usercentrics",
       "saved": 0,
-      "method": "none"
+      "method": "html-scrape",
+      "note": "https://usercentrics.com/feed/ is a valid RSS 2.0 feed but contains zero items; HTML scrape of knowledge-hub surfaced only posts dated <= 2026-05-01, all older than the prior fetch cutoff."
     }
   ],
   "post_count": 0,
-  "fetched": "2026-06-07T00:00:00Z"
+  "fetched": "2026-06-21T17:00:00Z"
 }

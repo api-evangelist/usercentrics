@@ -46,16 +46,16 @@ apis:
         url: https://docs.usercentrics.com/cmp_in_app_sdk/latest/
       - type: APIReference
         url: https://docs.usercentrics.com/cmp_in_app_sdk/latest/api/api_documentation/
-      - type: SDK
+      - type: SDKs
         url: https://github.com/Usercentrics/flutter-sdk
         name: Flutter SDK
-      - type: SDK
+      - type: SDKs
         url: https://github.com/Usercentrics/react-native-sdk
         name: React Native SDK
-      - type: SDK
+      - type: SDKs
         url: https://github.com/Usercentrics/ios-sample
         name: iOS Sample
-      - type: SDK
+      - type: SDKs
         url: https://github.com/Usercentrics/android-sample
         name: Android Sample
       - type: OpenAPI
@@ -122,7 +122,7 @@ common:
     url: https://usercentrics.com/
   - type: Portal
     url: https://docs.usercentrics.com/
-  - type: SignUp
+  - type: Signup
     url: https://usercentrics.com/free-trial/
   - type: Pricing
     url: https://usercentrics.com/pricing/
