@@ -1,0 +1,45 @@
+openapi: 3.1.0
+info:
+  title: Usercentrics App CMP SDK CCPA GPP API
+  description: 'Public method surface of the Usercentrics App CMP SDK across iOS, tvOS, Android, AndroidTV,
+
+    Unity, Flutter, and React Native. The SDK is delivered as a client-side library; this OpenAPI
+
+    document models the SDK call surface as logical HTTP operations so that lifecycle, capability,
+
+    and Naftiko tooling can reason about it uniformly with other Usercentrics surfaces.
+
+
+    Reference: https://docs.usercentrics.com/cmp_in_app_sdk/latest/api/api_documentation/
+
+    '
+  version: 1.0.0
+  contact:
+    name: Usercentrics Documentation
+    url: https://docs.usercentrics.com/cmp_in_app_sdk/latest/
+servers:
+- url: sdk://usercentrics.app
+  description: In-process App CMP SDK (logical URL).
+tags:
+- name: GPP
+paths:
+  /gpp/ping:
+    get:
+      tags:
+      - GPP
+      summary: Ping GPP
+      description: Invoke __gpp("ping") to check Global Privacy Platform readiness.
+      operationId: gppPing
+      responses:
+        '200':
+          description: GPP signal returned.
+  /gpp/get-gpp-data:
+    get:
+      tags:
+      - GPP
+      summary: Get GPP Data
+      description: Retrieve the current Global Privacy Platform consent string.
+      operationId: gppGetGppData
+      responses:
+        '200':
+          description: GPP data returned.

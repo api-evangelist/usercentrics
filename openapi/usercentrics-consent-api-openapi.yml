@@ -1,0 +1,164 @@
+openapi: 3.1.0
+info:
+  title: Usercentrics App CMP SDK CCPA Consent API
+  description: 'Public method surface of the Usercentrics App CMP SDK across iOS, tvOS, Android, AndroidTV,
+
+    Unity, Flutter, and React Native. The SDK is delivered as a client-side library; this OpenAPI
+
+    document models the SDK call surface as logical HTTP operations so that lifecycle, capability,
+
+    and Naftiko tooling can reason about it uniformly with other Usercentrics surfaces.
+
+
+    Reference: https://docs.usercentrics.com/cmp_in_app_sdk/latest/api/api_documentation/
+
+    '
+  version: 1.0.0
+  contact:
+    name: Usercentrics Documentation
+    url: https://docs.usercentrics.com/cmp_in_app_sdk/latest/
+servers:
+- url: sdk://usercentrics.app
+  description: In-process App CMP SDK (logical URL).
+tags:
+- name: Consent
+paths:
+  /cmp-data:
+    get:
+      tags:
+      - Consent
+      summary: Get CMP Data
+      description: Retrieve the active CMP configuration including service list, categories, and copy.
+      operationId: getCmpData
+      responses:
+        '200':
+          description: Active CMP configuration returned.
+  /consents:
+    get:
+      tags:
+      - Consent
+      summary: Get Consents
+      description: Return the current per-service consent state stored on device.
+      operationId: getConsents
+      responses:
+        '200':
+          description: Per-service consent state returned.
+  /consent/withdraw:
+    post:
+      tags:
+      - Consent
+      summary: Withdraw Consent
+      description: Withdraw all consent for the current user (Cookiebot.withdraw()).
+      operationId: cookiebotWithdraw
+      responses:
+        '200':
+          description: Consent withdrawn.
+  /consent/submit-custom:
+    post:
+      tags:
+      - Consent
+      summary: Submit Custom Consent
+      description: Submit a custom consent decision (Cookiebot.submitCustomConsent).
+      operationId: cookiebotSubmitCustomConsent
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                preferences:
+                  type: boolean
+                statistics:
+                  type: boolean
+                marketing:
+                  type: boolean
+      responses:
+        '200':
+          description: Custom consent submitted.
+  /consent/state:
+    get:
+      tags:
+      - Consent
+      summary: Get Consent State
+      description: Read Cookiebot.consent (necessary, preferences, statistics, marketing) flags.
+      operationId: cookiebotGetConsent
+      responses:
+        '200':
+          description: Consent flags returned.
+  /scripts/get:
+    get:
+      tags:
+      - Consent
+      summary: Get Script
+      description: Retrieve a script blocked by Cookiebot pending consent (Cookiebot.getScript).
+      operationId: cookiebotGetScript
+      responses:
+        '200':
+          description: Script retrieved.
+  /scripts/run:
+    post:
+      tags:
+      - Consent
+      summary: Run Scripts
+      description: Execute scripts that have been gated on consent (Cookiebot.runScripts).
+      operationId: cookiebotRunScripts
+      responses:
+        '200':
+          description: Scripts executed.
+  /ui/accept-all:
+    post:
+      tags:
+      - Consent
+      summary: Accept All Services
+      description: Grant consent for every configured service (UC_UI.acceptAllConsents).
+      operationId: uiAcceptAll
+      responses:
+        '200':
+          description: All consents granted.
+  /ui/deny-all:
+    post:
+      tags:
+      - Consent
+      summary: Deny All Services
+      description: Deny consent for every configured service (UC_UI.denyAllConsents).
+      operationId: uiDenyAll
+      responses:
+        '200':
+          description: All consents denied.
+  /ui/update-services:
+    post:
+      tags:
+      - Consent
+      summary: Update Service Consents
+      description: Update consent state for a specific list of services (UC_UI.updateServices).
+      operationId: uiUpdateServices
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                services:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                      consent:
+                        type: boolean
+      responses:
+        '200':
+          description: Consent updated.
+  /ui/services-base-info:
+    get:
+      tags:
+      - Consent
+      summary: Get Services Base Info
+      description: Return the configured services with current consent state.
+      operationId: uiGetServicesBaseInfo
+      responses:
+        '200':
+          description: Service list returned.

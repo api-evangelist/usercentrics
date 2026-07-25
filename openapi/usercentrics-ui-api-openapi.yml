@@ -1,0 +1,45 @@
+openapi: 3.1.0
+info:
+  title: Usercentrics App CMP SDK CCPA UI API
+  description: 'Public method surface of the Usercentrics App CMP SDK across iOS, tvOS, Android, AndroidTV,
+
+    Unity, Flutter, and React Native. The SDK is delivered as a client-side library; this OpenAPI
+
+    document models the SDK call surface as logical HTTP operations so that lifecycle, capability,
+
+    and Naftiko tooling can reason about it uniformly with other Usercentrics surfaces.
+
+
+    Reference: https://docs.usercentrics.com/cmp_in_app_sdk/latest/api/api_documentation/
+
+    '
+  version: 1.0.0
+  contact:
+    name: Usercentrics Documentation
+    url: https://docs.usercentrics.com/cmp_in_app_sdk/latest/
+servers:
+- url: sdk://usercentrics.app
+  description: In-process App CMP SDK (logical URL).
+tags:
+- name: UI
+paths:
+  /ui/show-first-layer:
+    post:
+      tags:
+      - UI
+      summary: Show First Layer
+      description: Programmatically display the first-layer consent banner (UC_UI.showFirstLayer).
+      operationId: uiShowFirstLayer
+      responses:
+        '200':
+          description: Banner shown.
+  /ui/show-second-layer:
+    post:
+      tags:
+      - UI
+      summary: Show Second Layer
+      description: Open the second-layer preference center (UC_UI.showSecondLayer).
+      operationId: uiShowSecondLayer
+      responses:
+        '200':
+          description: Preference center shown.

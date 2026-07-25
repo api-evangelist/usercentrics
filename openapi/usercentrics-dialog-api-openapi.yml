@@ -1,0 +1,55 @@
+openapi: 3.1.0
+info:
+  title: Usercentrics App CMP SDK CCPA Dialog API
+  description: 'Public method surface of the Usercentrics App CMP SDK across iOS, tvOS, Android, AndroidTV,
+
+    Unity, Flutter, and React Native. The SDK is delivered as a client-side library; this OpenAPI
+
+    document models the SDK call surface as logical HTTP operations so that lifecycle, capability,
+
+    and Naftiko tooling can reason about it uniformly with other Usercentrics surfaces.
+
+
+    Reference: https://docs.usercentrics.com/cmp_in_app_sdk/latest/api/api_documentation/
+
+    '
+  version: 1.0.0
+  contact:
+    name: Usercentrics Documentation
+    url: https://docs.usercentrics.com/cmp_in_app_sdk/latest/
+servers:
+- url: sdk://usercentrics.app
+  description: In-process App CMP SDK (logical URL).
+tags:
+- name: Dialog
+paths:
+  /dialog/show:
+    post:
+      tags:
+      - Dialog
+      summary: Show Cookiebot Dialog
+      description: Display the Cookiebot consent dialog (Cookiebot.show()).
+      operationId: cookiebotShow
+      responses:
+        '200':
+          description: Dialog shown.
+  /dialog/hide:
+    post:
+      tags:
+      - Dialog
+      summary: Hide Cookiebot Dialog
+      description: Hide the Cookiebot consent dialog (Cookiebot.hide()).
+      operationId: cookiebotHide
+      responses:
+        '200':
+          description: Dialog hidden.
+  /dialog/renew:
+    post:
+      tags:
+      - Dialog
+      summary: Renew Consent
+      description: Force re-prompt for consent (Cookiebot.renew()).
+      operationId: cookiebotRenew
+      responses:
+        '200':
+          description: Consent re-prompted.

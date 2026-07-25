@@ -1,0 +1,62 @@
+openapi: 3.1.0
+info:
+  title: Usercentrics App CMP SDK CCPA Consent Mode API
+  description: 'Public method surface of the Usercentrics App CMP SDK across iOS, tvOS, Android, AndroidTV,
+
+    Unity, Flutter, and React Native. The SDK is delivered as a client-side library; this OpenAPI
+
+    document models the SDK call surface as logical HTTP operations so that lifecycle, capability,
+
+    and Naftiko tooling can reason about it uniformly with other Usercentrics surfaces.
+
+
+    Reference: https://docs.usercentrics.com/cmp_in_app_sdk/latest/api/api_documentation/
+
+    '
+  version: 1.0.0
+  contact:
+    name: Usercentrics Documentation
+    url: https://docs.usercentrics.com/cmp_in_app_sdk/latest/
+servers:
+- url: sdk://usercentrics.app
+  description: In-process App CMP SDK (logical URL).
+tags:
+- name: Consent Mode
+paths:
+  /consent-mode/update:
+    post:
+      tags:
+      - Consent Mode
+      summary: Update Google Consent Mode
+      description: Update Google Consent Mode v2 signals (ad_storage, analytics_storage, ad_user_data, ad_personalization) based on current consent state.
+      operationId: consentModeUpdate
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                ad_storage:
+                  type: string
+                  enum:
+                  - granted
+                  - denied
+                analytics_storage:
+                  type: string
+                  enum:
+                  - granted
+                  - denied
+                ad_user_data:
+                  type: string
+                  enum:
+                  - granted
+                  - denied
+                ad_personalization:
+                  type: string
+                  enum:
+                  - granted
+                  - denied
+      responses:
+        '200':
+          description: Consent Mode signals updated.

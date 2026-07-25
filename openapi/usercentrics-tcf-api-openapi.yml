@@ -1,0 +1,55 @@
+openapi: 3.1.0
+info:
+  title: Usercentrics App CMP SDK CCPA TCF API
+  description: 'Public method surface of the Usercentrics App CMP SDK across iOS, tvOS, Android, AndroidTV,
+
+    Unity, Flutter, and React Native. The SDK is delivered as a client-side library; this OpenAPI
+
+    document models the SDK call surface as logical HTTP operations so that lifecycle, capability,
+
+    and Naftiko tooling can reason about it uniformly with other Usercentrics surfaces.
+
+
+    Reference: https://docs.usercentrics.com/cmp_in_app_sdk/latest/api/api_documentation/
+
+    '
+  version: 1.0.0
+  contact:
+    name: Usercentrics Documentation
+    url: https://docs.usercentrics.com/cmp_in_app_sdk/latest/
+servers:
+- url: sdk://usercentrics.app
+  description: In-process App CMP SDK (logical URL).
+tags:
+- name: TCF
+paths:
+  /tcf-data:
+    get:
+      tags:
+      - TCF
+      summary: Get TCF Data
+      description: Return the IAB TCF 2.3 string and per-purpose/per-vendor consent state.
+      operationId: getTcfData
+      responses:
+        '200':
+          description: TCF data returned.
+  /tcf/get-tc-data:
+    post:
+      tags:
+      - TCF
+      summary: Get TC Data
+      description: Invoke __tcfapi("getTCData", 2, callback) to retrieve the IAB TCF 2.3 consent payload.
+      operationId: tcfGetTCData
+      responses:
+        '200':
+          description: TCData returned.
+  /tcf/add-event-listener:
+    post:
+      tags:
+      - TCF
+      summary: Add TCF Event Listener
+      description: Register a TCF event listener via __tcfapi("addEventListener").
+      operationId: tcfAddEventListener
+      responses:
+        '200':
+          description: Listener registered.

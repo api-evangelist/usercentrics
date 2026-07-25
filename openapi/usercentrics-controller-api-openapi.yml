@@ -1,0 +1,35 @@
+openapi: 3.1.0
+info:
+  title: Usercentrics App CMP SDK CCPA Controller API
+  description: 'Public method surface of the Usercentrics App CMP SDK across iOS, tvOS, Android, AndroidTV,
+
+    Unity, Flutter, and React Native. The SDK is delivered as a client-side library; this OpenAPI
+
+    document models the SDK call surface as logical HTTP operations so that lifecycle, capability,
+
+    and Naftiko tooling can reason about it uniformly with other Usercentrics surfaces.
+
+
+    Reference: https://docs.usercentrics.com/cmp_in_app_sdk/latest/api/api_documentation/
+
+    '
+  version: 1.0.0
+  contact:
+    name: Usercentrics Documentation
+    url: https://docs.usercentrics.com/cmp_in_app_sdk/latest/
+servers:
+- url: sdk://usercentrics.app
+  description: In-process App CMP SDK (logical URL).
+tags:
+- name: Controller
+paths:
+  /controller-id:
+    get:
+      tags:
+      - Controller
+      summary: Get Controller ID
+      description: Return the Usercentrics controller ID identifying the current user's consent record.
+      operationId: getControllerId
+      responses:
+        '200':
+          description: Controller ID returned.

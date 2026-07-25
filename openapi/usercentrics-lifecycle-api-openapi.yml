@@ -1,0 +1,91 @@
+openapi: 3.1.0
+info:
+  title: Usercentrics App CMP SDK CCPA Lifecycle API
+  description: 'Public method surface of the Usercentrics App CMP SDK across iOS, tvOS, Android, AndroidTV,
+
+    Unity, Flutter, and React Native. The SDK is delivered as a client-side library; this OpenAPI
+
+    document models the SDK call surface as logical HTTP operations so that lifecycle, capability,
+
+    and Naftiko tooling can reason about it uniformly with other Usercentrics surfaces.
+
+
+    Reference: https://docs.usercentrics.com/cmp_in_app_sdk/latest/api/api_documentation/
+
+    '
+  version: 1.0.0
+  contact:
+    name: Usercentrics Documentation
+    url: https://docs.usercentrics.com/cmp_in_app_sdk/latest/
+servers:
+- url: sdk://usercentrics.app
+  description: In-process App CMP SDK (logical URL).
+tags:
+- name: Lifecycle
+paths:
+  /configure:
+    post:
+      tags:
+      - Lifecycle
+      summary: Configure The SDK
+      description: Initialize the App CMP SDK with a Settings ID, runtime options, and ruleset.
+      operationId: configureSdk
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                settingsId:
+                  type: string
+                ruleSetId:
+                  type: string
+                defaultLanguage:
+                  type: string
+                version:
+                  type: string
+                timeoutMillis:
+                  type: integer
+      responses:
+        '200':
+          description: SDK configured.
+  /is-ready:
+    get:
+      tags:
+      - Lifecycle
+      summary: Check Readiness
+      description: Returns once the SDK is fully initialized and ready to read or collect consent.
+      operationId: isReady
+      responses:
+        '200':
+          description: SDK ready.
+  /restore-user-session:
+    post:
+      tags:
+      - Lifecycle
+      summary: Restore User Session
+      description: Restore an existing consent session from a controller ID across devices.
+      operationId: restoreUserSession
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                controllerId:
+                  type: string
+      responses:
+        '200':
+          description: Session restored.
+  /reset:
+    post:
+      tags:
+      - Lifecycle
+      summary: Reset Consent State
+      description: Clear all stored consent state for the current user.
+      operationId: resetUser
+      responses:
+        '200':
+          description: User reset.
