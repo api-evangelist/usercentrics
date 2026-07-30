@@ -8,7 +8,19 @@ description: Usercentrics is a Munich-based consent management platform (CMP) an
   websites and apps across 195 countries, processing 8.8B+ monthly consents. Products span Web CMP,
   App CMP, CTV CMP, Server-Side Tagging, Meta Signals Gateway, Preference Manager, Privacy Policy
   Generator, Compliance Scanners, and MCP Manager for AI governance.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Freemium
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/usercentrics.png
 tags:
   - Privacy
   - Consent
@@ -24,99 +36,312 @@ created: '2026-05-25'
 modified: '2026-05-25'
 specificationVersion: '0.19'
 apis:
-  - aid: usercentrics:app-cmp-sdk
-    name: Usercentrics App CMP SDK
-    description: Mobile and TV consent management SDK with native iOS (11+), tvOS (11+), Android (API 16+),
-      AndroidTV, Unity (2018.4+), Flutter (1.20+), and React Native (0.65+) support. Comprises
-      UsercentricsCore (backend logic) and UsercentricsUI (prebuilt banner). Supports GDPR, CCPA, LGPD,
-      and IAB TCF 2.0.
-    humanURL: https://docs.usercentrics.com/cmp_in_app_sdk/latest/
-    tags:
-      - SDK
-      - Mobile
-      - iOS
-      - Android
-      - Flutter
-      - React Native
-      - Unity
-      - TV
-      - Consent
-    properties:
-      - type: Documentation
-        url: https://docs.usercentrics.com/cmp_in_app_sdk/latest/
-      - type: APIReference
-        url: https://docs.usercentrics.com/cmp_in_app_sdk/latest/api/api_documentation/
-      - type: SDKs
-        url: https://github.com/Usercentrics/flutter-sdk
-        name: Flutter SDK
-      - type: SDKs
-        url: https://github.com/Usercentrics/react-native-sdk
-        name: React Native SDK
-      - type: SDKs
-        url: https://github.com/Usercentrics/ios-sample
-        name: iOS Sample
-      - type: SDKs
-        url: https://github.com/Usercentrics/android-sample
-        name: Android Sample
-      - type: OpenAPI
-        url: openapi/usercentrics-app-cmp-sdk-openapi.yml
-  - aid: usercentrics:web-cmp-v3
-    name: Usercentrics Web CMP (V3)
-    description: Browser-side consent management platform for websites. Exposes the UC_UI JavaScript API,
-      IAB __tcfapi (TCF 2.3), IAB __gpp (GPP), dataLayer events, and Google Consent Mode v2 / Microsoft UET
-      Consent Mode signals. Configurable through the Usercentrics Admin Interface and delivered via the
-      Usercentrics CDN.
-    humanURL: https://docs.usercentrics.com/cmp_v3/latest/
-    tags:
-      - Web
-      - JavaScript
-      - CMP
-      - TCF
-      - GPP
-      - Consent Mode
-    properties:
-      - type: Documentation
-        url: https://docs.usercentrics.com/cmp_v3/latest/
-      - type: OpenAPI
-        url: openapi/usercentrics-web-cmp-v3-openapi.yml
-  - aid: usercentrics:cookiebot-cmp
-    name: Cookiebot CMP
-    description: Cookiebot consent management platform (a Usercentrics company since the September 2021
-      Cybot acquisition). Provides a JavaScript SDK (Cookiebot global, show()/hide()/renew()/getScript()/
-      runScripts()/withdraw()/submitCustomConsent()), CookiebotOnConsentReady / OnAccept / OnDecline
-      events, server-side CookieConsent cookie integration (C#, PHP, VB samples), and the patented monthly
-      site scanner.
-    humanURL: https://www.cookiebot.com/en/developer/
-    tags:
-      - Cookies
-      - Scanner
-      - JavaScript
-      - GDPR
-      - GTM
-    properties:
-      - type: Documentation
-        url: https://www.cookiebot.com/en/developer/
-      - type: Documentation
-        url: https://www.cookiebot.com/en/help/
-      - type: Support
-        url: https://support.cookiebot.com/hc/en-us/
-      - type: OpenAPI
-        url: openapi/usercentrics-cookiebot-cmp-openapi.yml
-  - aid: usercentrics:server-side-tagging
-    name: Usercentrics Server-Side Tagging (sGTM)
-    description: Hosted server-side Google Tag Manager service for first-party data collection, consent
-      enforcement, and tag execution off the browser. Includes Meta Signals Gateway for the Meta
-      Conversions API and consent-aware event forwarding.
-    humanURL: https://usercentrics.com/integrations/
-    tags:
-      - Server-Side
-      - GTM
-      - Tagging
-      - Meta
-      - Conversions API
-    properties:
-      - type: Documentation
-        url: https://usercentrics.com/integrations/
+- aid: usercentrics:server-side-tagging
+  name: Usercentrics Server-Side Tagging (sGTM)
+  description: >-
+    Hosted server-side Google Tag Manager service for first-party data collection, consent enforcement,
+    and tag execution off the browser. Includes Meta Signals Gateway for the Meta Conversions API and
+    consent-aware event forwarding.
+  humanURL: https://usercentrics.com/integrations/
+  tags:
+  - Server-Side
+  - GTM
+  - Tagging
+  - Meta
+  - Conversions API
+  properties:
+  - type: Documentation
+    url: https://usercentrics.com/integrations/
+- aid: usercentrics:usercentrics-ccpa-api
+  name: Usercentrics CCPA API
+  description: The CCPA API from Usercentrics — 1 operation(s) for ccpa.
+  humanURL: https://docs.usercentrics.com/cmp_in_app_sdk/latest/
+  tags:
+  - CCPA
+  properties:
+  - type: OpenAPI
+    url: openapi/usercentrics-ccpa-api-openapi.yml
+  - type: Documentation
+    url: https://docs.usercentrics.com/cmp_in_app_sdk/latest/
+  - type: APIReference
+    url: https://docs.usercentrics.com/cmp_in_app_sdk/latest/api/api_documentation/
+  - type: SDKs
+    url: https://github.com/Usercentrics/flutter-sdk
+  - type: SDKs
+    url: https://github.com/Usercentrics/react-native-sdk
+  - type: SDKs
+    url: https://github.com/Usercentrics/ios-sample
+  - type: SDKs
+    url: https://github.com/Usercentrics/android-sample
+  - type: Documentation
+    url: https://docs.usercentrics.com/cmp_v3/latest/
+  - type: Documentation
+    url: https://www.cookiebot.com/en/developer/
+  - type: Documentation
+    url: https://www.cookiebot.com/en/help/
+  - type: Support
+    url: https://support.cookiebot.com/hc/en-us/
+- aid: usercentrics:usercentrics-consent-api
+  name: Usercentrics Consent API
+  description: The Consent API from Usercentrics — 11 operation(s) for consent.
+  humanURL: https://docs.usercentrics.com/cmp_in_app_sdk/latest/
+  tags:
+  - Consent
+  properties:
+  - type: OpenAPI
+    url: openapi/usercentrics-consent-api-openapi.yml
+  - type: Documentation
+    url: https://docs.usercentrics.com/cmp_in_app_sdk/latest/
+  - type: APIReference
+    url: https://docs.usercentrics.com/cmp_in_app_sdk/latest/api/api_documentation/
+  - type: SDKs
+    url: https://github.com/Usercentrics/flutter-sdk
+  - type: SDKs
+    url: https://github.com/Usercentrics/react-native-sdk
+  - type: SDKs
+    url: https://github.com/Usercentrics/ios-sample
+  - type: SDKs
+    url: https://github.com/Usercentrics/android-sample
+  - type: Documentation
+    url: https://docs.usercentrics.com/cmp_v3/latest/
+  - type: Documentation
+    url: https://www.cookiebot.com/en/developer/
+  - type: Documentation
+    url: https://www.cookiebot.com/en/help/
+  - type: Support
+    url: https://support.cookiebot.com/hc/en-us/
+- aid: usercentrics:usercentrics-consent-mode-api
+  name: Usercentrics Consent Mode API
+  description: The Consent Mode API from Usercentrics — 1 operation(s) for consent mode.
+  humanURL: https://docs.usercentrics.com/cmp_in_app_sdk/latest/
+  tags:
+  - Consent Mode
+  properties:
+  - type: OpenAPI
+    url: openapi/usercentrics-consent-mode-api-openapi.yml
+  - type: Documentation
+    url: https://docs.usercentrics.com/cmp_in_app_sdk/latest/
+  - type: APIReference
+    url: https://docs.usercentrics.com/cmp_in_app_sdk/latest/api/api_documentation/
+  - type: SDKs
+    url: https://github.com/Usercentrics/flutter-sdk
+  - type: SDKs
+    url: https://github.com/Usercentrics/react-native-sdk
+  - type: SDKs
+    url: https://github.com/Usercentrics/ios-sample
+  - type: SDKs
+    url: https://github.com/Usercentrics/android-sample
+  - type: Documentation
+    url: https://docs.usercentrics.com/cmp_v3/latest/
+  - type: Documentation
+    url: https://www.cookiebot.com/en/developer/
+  - type: Documentation
+    url: https://www.cookiebot.com/en/help/
+  - type: Support
+    url: https://support.cookiebot.com/hc/en-us/
+- aid: usercentrics:usercentrics-controller-api
+  name: Usercentrics Controller API
+  description: The Controller API from Usercentrics — 1 operation(s) for controller.
+  humanURL: https://docs.usercentrics.com/cmp_in_app_sdk/latest/
+  tags:
+  - Controller
+  properties:
+  - type: OpenAPI
+    url: openapi/usercentrics-controller-api-openapi.yml
+  - type: Documentation
+    url: https://docs.usercentrics.com/cmp_in_app_sdk/latest/
+  - type: APIReference
+    url: https://docs.usercentrics.com/cmp_in_app_sdk/latest/api/api_documentation/
+  - type: SDKs
+    url: https://github.com/Usercentrics/flutter-sdk
+  - type: SDKs
+    url: https://github.com/Usercentrics/react-native-sdk
+  - type: SDKs
+    url: https://github.com/Usercentrics/ios-sample
+  - type: SDKs
+    url: https://github.com/Usercentrics/android-sample
+  - type: Documentation
+    url: https://docs.usercentrics.com/cmp_v3/latest/
+  - type: Documentation
+    url: https://www.cookiebot.com/en/developer/
+  - type: Documentation
+    url: https://www.cookiebot.com/en/help/
+  - type: Support
+    url: https://support.cookiebot.com/hc/en-us/
+- aid: usercentrics:usercentrics-dialog-api
+  name: Usercentrics Dialog API
+  description: The Dialog API from Usercentrics — 3 operation(s) for dialog.
+  humanURL: https://docs.usercentrics.com/cmp_in_app_sdk/latest/
+  tags:
+  - Dialog
+  properties:
+  - type: OpenAPI
+    url: openapi/usercentrics-dialog-api-openapi.yml
+  - type: Documentation
+    url: https://docs.usercentrics.com/cmp_in_app_sdk/latest/
+  - type: APIReference
+    url: https://docs.usercentrics.com/cmp_in_app_sdk/latest/api/api_documentation/
+  - type: SDKs
+    url: https://github.com/Usercentrics/flutter-sdk
+  - type: SDKs
+    url: https://github.com/Usercentrics/react-native-sdk
+  - type: SDKs
+    url: https://github.com/Usercentrics/ios-sample
+  - type: SDKs
+    url: https://github.com/Usercentrics/android-sample
+  - type: Documentation
+    url: https://docs.usercentrics.com/cmp_v3/latest/
+  - type: Documentation
+    url: https://www.cookiebot.com/en/developer/
+  - type: Documentation
+    url: https://www.cookiebot.com/en/help/
+  - type: Support
+    url: https://support.cookiebot.com/hc/en-us/
+- aid: usercentrics:usercentrics-gpp-api
+  name: Usercentrics GPP API
+  description: The GPP API from Usercentrics — 2 operation(s) for gpp.
+  humanURL: https://docs.usercentrics.com/cmp_in_app_sdk/latest/
+  tags:
+  - GPP
+  properties:
+  - type: OpenAPI
+    url: openapi/usercentrics-gpp-api-openapi.yml
+  - type: Documentation
+    url: https://docs.usercentrics.com/cmp_in_app_sdk/latest/
+  - type: APIReference
+    url: https://docs.usercentrics.com/cmp_in_app_sdk/latest/api/api_documentation/
+  - type: SDKs
+    url: https://github.com/Usercentrics/flutter-sdk
+  - type: SDKs
+    url: https://github.com/Usercentrics/react-native-sdk
+  - type: SDKs
+    url: https://github.com/Usercentrics/ios-sample
+  - type: SDKs
+    url: https://github.com/Usercentrics/android-sample
+  - type: Documentation
+    url: https://docs.usercentrics.com/cmp_v3/latest/
+  - type: Documentation
+    url: https://www.cookiebot.com/en/developer/
+  - type: Documentation
+    url: https://www.cookiebot.com/en/help/
+  - type: Support
+    url: https://support.cookiebot.com/hc/en-us/
+- aid: usercentrics:usercentrics-lifecycle-api
+  name: Usercentrics Lifecycle API
+  description: The Lifecycle API from Usercentrics — 4 operation(s) for lifecycle.
+  humanURL: https://docs.usercentrics.com/cmp_in_app_sdk/latest/
+  tags:
+  - Lifecycle
+  properties:
+  - type: OpenAPI
+    url: openapi/usercentrics-lifecycle-api-openapi.yml
+  - type: Documentation
+    url: https://docs.usercentrics.com/cmp_in_app_sdk/latest/
+  - type: APIReference
+    url: https://docs.usercentrics.com/cmp_in_app_sdk/latest/api/api_documentation/
+  - type: SDKs
+    url: https://github.com/Usercentrics/flutter-sdk
+  - type: SDKs
+    url: https://github.com/Usercentrics/react-native-sdk
+  - type: SDKs
+    url: https://github.com/Usercentrics/ios-sample
+  - type: SDKs
+    url: https://github.com/Usercentrics/android-sample
+  - type: Documentation
+    url: https://docs.usercentrics.com/cmp_v3/latest/
+  - type: Documentation
+    url: https://www.cookiebot.com/en/developer/
+  - type: Documentation
+    url: https://www.cookiebot.com/en/help/
+  - type: Support
+    url: https://support.cookiebot.com/hc/en-us/
+- aid: usercentrics:usercentrics-scanner-api
+  name: Usercentrics Scanner API
+  description: The Scanner API from Usercentrics — 1 operation(s) for scanner.
+  humanURL: https://docs.usercentrics.com/cmp_in_app_sdk/latest/
+  tags:
+  - Scanner
+  properties:
+  - type: OpenAPI
+    url: openapi/usercentrics-scanner-api-openapi.yml
+  - type: Documentation
+    url: https://docs.usercentrics.com/cmp_in_app_sdk/latest/
+  - type: APIReference
+    url: https://docs.usercentrics.com/cmp_in_app_sdk/latest/api/api_documentation/
+  - type: SDKs
+    url: https://github.com/Usercentrics/flutter-sdk
+  - type: SDKs
+    url: https://github.com/Usercentrics/react-native-sdk
+  - type: SDKs
+    url: https://github.com/Usercentrics/ios-sample
+  - type: SDKs
+    url: https://github.com/Usercentrics/android-sample
+  - type: Documentation
+    url: https://docs.usercentrics.com/cmp_v3/latest/
+  - type: Documentation
+    url: https://www.cookiebot.com/en/developer/
+  - type: Documentation
+    url: https://www.cookiebot.com/en/help/
+  - type: Support
+    url: https://support.cookiebot.com/hc/en-us/
+- aid: usercentrics:usercentrics-tcf-api
+  name: Usercentrics TCF API
+  description: The TCF API from Usercentrics — 3 operation(s) for tcf.
+  humanURL: https://docs.usercentrics.com/cmp_in_app_sdk/latest/
+  tags:
+  - TCF
+  properties:
+  - type: OpenAPI
+    url: openapi/usercentrics-tcf-api-openapi.yml
+  - type: Documentation
+    url: https://docs.usercentrics.com/cmp_in_app_sdk/latest/
+  - type: APIReference
+    url: https://docs.usercentrics.com/cmp_in_app_sdk/latest/api/api_documentation/
+  - type: SDKs
+    url: https://github.com/Usercentrics/flutter-sdk
+  - type: SDKs
+    url: https://github.com/Usercentrics/react-native-sdk
+  - type: SDKs
+    url: https://github.com/Usercentrics/ios-sample
+  - type: SDKs
+    url: https://github.com/Usercentrics/android-sample
+  - type: Documentation
+    url: https://docs.usercentrics.com/cmp_v3/latest/
+  - type: Documentation
+    url: https://www.cookiebot.com/en/developer/
+  - type: Documentation
+    url: https://www.cookiebot.com/en/help/
+  - type: Support
+    url: https://support.cookiebot.com/hc/en-us/
+- aid: usercentrics:usercentrics-ui-api
+  name: Usercentrics UI API
+  description: The UI API from Usercentrics — 2 operation(s) for ui.
+  humanURL: https://docs.usercentrics.com/cmp_in_app_sdk/latest/
+  tags:
+  - UI
+  properties:
+  - type: OpenAPI
+    url: openapi/usercentrics-ui-api-openapi.yml
+  - type: Documentation
+    url: https://docs.usercentrics.com/cmp_in_app_sdk/latest/
+  - type: APIReference
+    url: https://docs.usercentrics.com/cmp_in_app_sdk/latest/api/api_documentation/
+  - type: SDKs
+    url: https://github.com/Usercentrics/flutter-sdk
+  - type: SDKs
+    url: https://github.com/Usercentrics/react-native-sdk
+  - type: SDKs
+    url: https://github.com/Usercentrics/ios-sample
+  - type: SDKs
+    url: https://github.com/Usercentrics/android-sample
+  - type: Documentation
+    url: https://docs.usercentrics.com/cmp_v3/latest/
+  - type: Documentation
+    url: https://www.cookiebot.com/en/developer/
+  - type: Documentation
+    url: https://www.cookiebot.com/en/help/
+  - type: Support
+    url: https://support.cookiebot.com/hc/en-us/
 common:
   - type: AgenticAccess
     url: agentic-access/usercentrics-agentic-access.yml
