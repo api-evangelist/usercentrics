@@ -1,0 +1,32 @@
+{
+  "provider": "usercentrics",
+  "sources": [
+    "usercentrics-ccpa-api-openapi.yml",
+    "usercentrics-consent-api-openapi.yml",
+    "usercentrics-consent-mode-api-openapi.yml",
+    "usercentrics-controller-api-openapi.yml",
+    "usercentrics-dialog-api-openapi.yml",
+    "usercentrics-gpp-api-openapi.yml",
+    "usercentrics-lifecycle-api-openapi.yml",
+    "usercentrics-scanner-api-openapi.yml",
+    "usercentrics-tcf-api-openapi.yml",
+    "usercentrics-ui-api-openapi.yml"
+  ],
+  "outputs": [
+    "usercentrics-ccpa-api-openapi.yml",
+    "usercentrics-consent-api-openapi.yml",
+    "usercentrics-consent-mode-api-openapi.yml",
+    "usercentrics-controller-api-openapi.yml",
+    "usercentrics-dialog-api-openapi.yml",
+    "usercentrics-gpp-api-openapi.yml",
+    "usercentrics-lifecycle-api-openapi.yml",
+    "usercentrics-scanner-api-openapi.yml",
+    "usercentrics-tcf-api-openapi.yml",
+    "usercentrics-ui-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

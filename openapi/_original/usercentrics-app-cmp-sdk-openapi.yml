@@ -1,0 +1,116 @@
+openapi: 3.1.0
+info:
+  title: Usercentrics App CMP SDK API
+  description: |
+    Public method surface of the Usercentrics App CMP SDK across iOS, tvOS, Android, AndroidTV,
+    Unity, Flutter, and React Native. The SDK is delivered as a client-side library; this OpenAPI
+    document models the SDK call surface as logical HTTP operations so that lifecycle, capability,
+    and Naftiko tooling can reason about it uniformly with other Usercentrics surfaces.
+
+    Reference: https://docs.usercentrics.com/cmp_in_app_sdk/latest/api/api_documentation/
+  version: "1.0.0"
+  contact:
+    name: Usercentrics Documentation
+    url: https://docs.usercentrics.com/cmp_in_app_sdk/latest/
+servers:
+  - url: sdk://usercentrics.app
+    description: In-process App CMP SDK (logical URL).
+tags:
+  - name: Lifecycle
+  - name: Consent
+  - name: TCF
+  - name: CCPA
+  - name: Controller
+paths:
+  /configure:
+    post:
+      tags: [Lifecycle]
+      summary: Configure The SDK
+      description: Initialize the App CMP SDK with a Settings ID, runtime options, and ruleset.
+      operationId: configureSdk
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                settingsId: { type: string }
+                ruleSetId: { type: string }
+                defaultLanguage: { type: string }
+                version: { type: string }
+                timeoutMillis: { type: integer }
+      responses:
+        '200': { description: SDK configured. }
+  /is-ready:
+    get:
+      tags: [Lifecycle]
+      summary: Check Readiness
+      description: Returns once the SDK is fully initialized and ready to read or collect consent.
+      operationId: isReady
+      responses:
+        '200': { description: SDK ready. }
+  /cmp-data:
+    get:
+      tags: [Consent]
+      summary: Get CMP Data
+      description: Retrieve the active CMP configuration including service list, categories, and copy.
+      operationId: getCmpData
+      responses:
+        '200': { description: Active CMP configuration returned. }
+  /consents:
+    get:
+      tags: [Consent]
+      summary: Get Consents
+      description: Return the current per-service consent state stored on device.
+      operationId: getConsents
+      responses:
+        '200': { description: Per-service consent state returned. }
+  /tcf-data:
+    get:
+      tags: [TCF]
+      summary: Get TCF Data
+      description: Return the IAB TCF 2.3 string and per-purpose/per-vendor consent state.
+      operationId: getTcfData
+      responses:
+        '200': { description: TCF data returned. }
+  /ccpa-data:
+    get:
+      tags: [CCPA]
+      summary: Get CCPA Data
+      description: Return the CCPA Do-Not-Sell signal for the current user.
+      operationId: getCcpaData
+      responses:
+        '200': { description: CCPA state returned. }
+  /controller-id:
+    get:
+      tags: [Controller]
+      summary: Get Controller ID
+      description: Return the Usercentrics controller ID identifying the current user's consent record.
+      operationId: getControllerId
+      responses:
+        '200': { description: Controller ID returned. }
+  /restore-user-session:
+    post:
+      tags: [Lifecycle]
+      summary: Restore User Session
+      description: Restore an existing consent session from a controller ID across devices.
+      operationId: restoreUserSession
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                controllerId: { type: string }
+      responses:
+        '200': { description: Session restored. }
+  /reset:
+    post:
+      tags: [Lifecycle]
+      summary: Reset Consent State
+      description: Clear all stored consent state for the current user.
+      operationId: resetUser
+      responses:
+        '200': { description: User reset. }
