@@ -1,0 +1,29 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Usercentrics App CMP SDK CCPA API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "CCPA",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get CCPA Data",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "sdk://usercentrics.app/ccpa-data"
+          },
+          "docs": "Return the CCPA Do-Not-Sell signal for the current user."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

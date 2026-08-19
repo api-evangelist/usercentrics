@@ -1,0 +1,29 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Usercentrics App CMP SDK CCPA Scanner API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Scanner",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Last Scanner Report",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "sdk://usercentrics.app/scanner/last-report"
+          },
+          "docs": "Retrieve the most recent Cookiebot website scan results."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

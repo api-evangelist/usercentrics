@@ -1,0 +1,310 @@
+{
+  "item": [
+    {
+      "id": "49d0e246-80ca-4786-aa88-1bfca4257974",
+      "name": "Lifecycle",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "31e3f1f3-6303-4dc5-b068-983724d39af1",
+          "name": "Configure The SDK",
+          "request": {
+            "name": "Configure The SDK",
+            "description": {
+              "content": "Initialize the App CMP SDK with a Settings ID, runtime options, and ruleset.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "configure"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"settingsId\": \"<string>\",\n  \"ruleSetId\": \"<string>\",\n  \"defaultLanguage\": \"<string>\",\n  \"version\": \"<string>\",\n  \"timeoutMillis\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "4d588b10-bd35-4f2e-b155-233eb327b9dd",
+              "name": "SDK configured.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "configure"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"settingsId\": \"<string>\",\n  \"ruleSetId\": \"<string>\",\n  \"defaultLanguage\": \"<string>\",\n  \"version\": \"<string>\",\n  \"timeoutMillis\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ea706672-4206-4f0a-9f01-da0782b56443",
+          "name": "Check Readiness",
+          "request": {
+            "name": "Check Readiness",
+            "description": {
+              "content": "Returns once the SDK is fully initialized and ready to read or collect consent.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "is-ready"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a1f0a74b-7127-42c9-8b9f-3e5f91658b23",
+              "name": "SDK ready.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "is-ready"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "14d36946-f4ca-432d-aea4-8428bac20eee",
+          "name": "Restore User Session",
+          "request": {
+            "name": "Restore User Session",
+            "description": {
+              "content": "Restore an existing consent session from a controller ID across devices.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "restore-user-session"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"controllerId\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "df948e00-8d9b-45e3-b0dd-4fb8d85994c8",
+              "name": "Session restored.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "restore-user-session"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"controllerId\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4dab4f7b-4946-4112-bbd5-a6ddf83b0e1b",
+          "name": "Reset Consent State",
+          "request": {
+            "name": "Reset Consent State",
+            "description": {
+              "content": "Clear all stored consent state for the current user.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "reset"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e52b963d-46f4-4dfe-b4ca-4ece31b8f626",
+              "name": "User reset.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "reset"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "sdk://usercentrics.app",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "5585bb0b-71a2-4a17-8bce-da0700c5e935",
+    "name": "Usercentrics App CMP SDK CCPA Lifecycle API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Public method surface of the Usercentrics App CMP SDK across iOS, tvOS, Android, AndroidTV,\nUnity, Flutter, and React Native. The SDK is delivered as a client-side library; this OpenAPI\ndocument models the SDK call surface as logical HTTP operations so that lifecycle, capability,\nand Naftiko tooling can reason about it uniformly with other Usercentrics surfaces.\n\nReference: https://docs.usercentrics.com/cmp_in_app_sdk/latest/api/api_documentation/\n\n\nContact Support:\n Name: Usercentrics Documentation",
+      "type": "text/plain"
+    }
+  }
+}

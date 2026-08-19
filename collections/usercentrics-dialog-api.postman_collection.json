@@ -1,0 +1,212 @@
+{
+  "item": [
+    {
+      "id": "2b5e0fcf-981b-4fd4-a7f5-fe4ccc7a9883",
+      "name": "Dialog",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "191caf74-535b-402a-80d1-0379ec65e074",
+          "name": "Show Cookiebot Dialog",
+          "request": {
+            "name": "Show Cookiebot Dialog",
+            "description": {
+              "content": "Display the Cookiebot consent dialog (Cookiebot.show()).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "dialog",
+                "show"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "4f83622d-0c38-46ec-90d1-d5e43647d18b",
+              "name": "Dialog shown.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "dialog",
+                    "show"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3bc379d8-8a21-456d-abc3-14d42ffdb763",
+          "name": "Hide Cookiebot Dialog",
+          "request": {
+            "name": "Hide Cookiebot Dialog",
+            "description": {
+              "content": "Hide the Cookiebot consent dialog (Cookiebot.hide()).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "dialog",
+                "hide"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "658ad22f-9703-424e-aebc-226c16ac6cbb",
+              "name": "Dialog hidden.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "dialog",
+                    "hide"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "400f7436-d36e-4be2-aa3e-741e94ec482e",
+          "name": "Renew Consent",
+          "request": {
+            "name": "Renew Consent",
+            "description": {
+              "content": "Force re-prompt for consent (Cookiebot.renew()).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "dialog",
+                "renew"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ccdd266a-d544-4d52-b714-1e982b4235f9",
+              "name": "Consent re-prompted.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "dialog",
+                    "renew"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "sdk://usercentrics.app",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "1659a5d0-2a4f-44fc-b459-42d4e64888d4",
+    "name": "Usercentrics App CMP SDK CCPA Dialog API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Public method surface of the Usercentrics App CMP SDK across iOS, tvOS, Android, AndroidTV,\nUnity, Flutter, and React Native. The SDK is delivered as a client-side library; this OpenAPI\ndocument models the SDK call surface as logical HTTP operations so that lifecycle, capability,\nand Naftiko tooling can reason about it uniformly with other Usercentrics surfaces.\n\nReference: https://docs.usercentrics.com/cmp_in_app_sdk/latest/api/api_documentation/\n\n\nContact Support:\n Name: Usercentrics Documentation",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Usercentrics App CMP SDK CCPA GPP API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "GPP",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Ping GPP",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "sdk://usercentrics.app/gpp/ping"
+          },
+          "docs": "Invoke __gpp(\"ping\") to check Global Privacy Platform readiness."
+        },
+        {
+          "info": {
+            "name": "Get GPP Data",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "sdk://usercentrics.app/gpp/get-gpp-data"
+          },
+          "docs": "Retrieve the current Global Privacy Platform consent string."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

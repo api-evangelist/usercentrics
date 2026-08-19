@@ -1,0 +1,51 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Usercentrics App CMP SDK CCPA TCF API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "TCF",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get TCF Data",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "sdk://usercentrics.app/tcf-data"
+          },
+          "docs": "Return the IAB TCF 2.3 string and per-purpose/per-vendor consent state."
+        },
+        {
+          "info": {
+            "name": "Get TC Data",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "sdk://usercentrics.app/tcf/get-tc-data"
+          },
+          "docs": "Invoke __tcfapi(\"getTCData\", 2, callback) to retrieve the IAB TCF 2.3 consent payload."
+        },
+        {
+          "info": {
+            "name": "Add TCF Event Listener",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "sdk://usercentrics.app/tcf/add-event-listener"
+          },
+          "docs": "Register a TCF event listener via __tcfapi(\"addEventListener\")."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

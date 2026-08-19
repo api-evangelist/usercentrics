@@ -1,0 +1,147 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Usercentrics App CMP SDK CCPA Consent API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Consent",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get CMP Data",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "sdk://usercentrics.app/cmp-data"
+          },
+          "docs": "Retrieve the active CMP configuration including service list, categories, and copy."
+        },
+        {
+          "info": {
+            "name": "Get Consents",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "sdk://usercentrics.app/consents"
+          },
+          "docs": "Return the current per-service consent state stored on device."
+        },
+        {
+          "info": {
+            "name": "Withdraw Consent",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "sdk://usercentrics.app/consent/withdraw"
+          },
+          "docs": "Withdraw all consent for the current user (Cookiebot.withdraw())."
+        },
+        {
+          "info": {
+            "name": "Submit Custom Consent",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "sdk://usercentrics.app/consent/submit-custom",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Submit a custom consent decision (Cookiebot.submitCustomConsent)."
+        },
+        {
+          "info": {
+            "name": "Get Consent State",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "sdk://usercentrics.app/consent/state"
+          },
+          "docs": "Read Cookiebot.consent (necessary, preferences, statistics, marketing) flags."
+        },
+        {
+          "info": {
+            "name": "Get Script",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "sdk://usercentrics.app/scripts/get"
+          },
+          "docs": "Retrieve a script blocked by Cookiebot pending consent (Cookiebot.getScript)."
+        },
+        {
+          "info": {
+            "name": "Run Scripts",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "sdk://usercentrics.app/scripts/run"
+          },
+          "docs": "Execute scripts that have been gated on consent (Cookiebot.runScripts)."
+        },
+        {
+          "info": {
+            "name": "Accept All Services",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "sdk://usercentrics.app/ui/accept-all"
+          },
+          "docs": "Grant consent for every configured service (UC_UI.acceptAllConsents)."
+        },
+        {
+          "info": {
+            "name": "Deny All Services",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "sdk://usercentrics.app/ui/deny-all"
+          },
+          "docs": "Deny consent for every configured service (UC_UI.denyAllConsents)."
+        },
+        {
+          "info": {
+            "name": "Update Service Consents",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "sdk://usercentrics.app/ui/update-services",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update consent state for a specific list of services (UC_UI.updateServices)."
+        },
+        {
+          "info": {
+            "name": "Get Services Base Info",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "sdk://usercentrics.app/ui/services-base-info"
+          },
+          "docs": "Return the configured services with current consent state."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

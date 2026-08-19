@@ -1,0 +1,152 @@
+{
+  "item": [
+    {
+      "id": "59c02c34-618e-477c-a2cf-c16bf3dde8af",
+      "name": "UI",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "c4828d89-c24c-4bbb-b1f2-f51e3212de64",
+          "name": "Show First Layer",
+          "request": {
+            "name": "Show First Layer",
+            "description": {
+              "content": "Programmatically display the first-layer consent banner (UC_UI.showFirstLayer).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "ui",
+                "show-first-layer"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "bef53704-7ce3-411f-bde8-05009aa8d863",
+              "name": "Banner shown.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "ui",
+                    "show-first-layer"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3cfa40f0-b173-4feb-8919-f206e21820f6",
+          "name": "Show Second Layer",
+          "request": {
+            "name": "Show Second Layer",
+            "description": {
+              "content": "Open the second-layer preference center (UC_UI.showSecondLayer).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "ui",
+                "show-second-layer"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "67bb1cbb-c0c8-4b33-96c1-1f01bdf0230e",
+              "name": "Preference center shown.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "ui",
+                    "show-second-layer"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "sdk://usercentrics.app",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "d63e399e-9755-4090-aa7c-f46b35eccfc3",
+    "name": "Usercentrics App CMP SDK CCPA UI API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Public method surface of the Usercentrics App CMP SDK across iOS, tvOS, Android, AndroidTV,\nUnity, Flutter, and React Native. The SDK is delivered as a client-side library; this OpenAPI\ndocument models the SDK call surface as logical HTTP operations so that lifecycle, capability,\nand Naftiko tooling can reason about it uniformly with other Usercentrics surfaces.\n\nReference: https://docs.usercentrics.com/cmp_in_app_sdk/latest/api/api_documentation/\n\n\nContact Support:\n Name: Usercentrics Documentation",
+      "type": "text/plain"
+    }
+  }
+}

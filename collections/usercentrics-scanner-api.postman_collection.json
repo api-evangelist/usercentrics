@@ -1,0 +1,92 @@
+{
+  "item": [
+    {
+      "id": "a16811e8-619e-48bb-99dd-10d5326f635b",
+      "name": "Scanner",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "f046a5c6-bf0c-4aef-b80b-29dfb9a032b2",
+          "name": "Get Last Scanner Report",
+          "request": {
+            "name": "Get Last Scanner Report",
+            "description": {
+              "content": "Retrieve the most recent Cookiebot website scan results.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "scanner",
+                "last-report"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "55095abf-8312-429c-b76c-5c669ccb706a",
+              "name": "Last scan report returned.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "scanner",
+                    "last-report"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "sdk://usercentrics.app",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "d29c168a-54e7-47d6-9705-a23810c6bb58",
+    "name": "Usercentrics App CMP SDK CCPA Scanner API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Public method surface of the Usercentrics App CMP SDK across iOS, tvOS, Android, AndroidTV,\nUnity, Flutter, and React Native. The SDK is delivered as a client-side library; this OpenAPI\ndocument models the SDK call surface as logical HTTP operations so that lifecycle, capability,\nand Naftiko tooling can reason about it uniformly with other Usercentrics surfaces.\n\nReference: https://docs.usercentrics.com/cmp_in_app_sdk/latest/api/api_documentation/\n\n\nContact Support:\n Name: Usercentrics Documentation",
+      "type": "text/plain"
+    }
+  }
+}

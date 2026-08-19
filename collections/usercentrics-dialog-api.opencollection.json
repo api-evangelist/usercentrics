@@ -1,0 +1,51 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Usercentrics App CMP SDK CCPA Dialog API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Dialog",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Show Cookiebot Dialog",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "sdk://usercentrics.app/dialog/show"
+          },
+          "docs": "Display the Cookiebot consent dialog (Cookiebot.show())."
+        },
+        {
+          "info": {
+            "name": "Hide Cookiebot Dialog",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "sdk://usercentrics.app/dialog/hide"
+          },
+          "docs": "Hide the Cookiebot consent dialog (Cookiebot.hide())."
+        },
+        {
+          "info": {
+            "name": "Renew Consent",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "sdk://usercentrics.app/dialog/renew"
+          },
+          "docs": "Force re-prompt for consent (Cookiebot.renew())."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

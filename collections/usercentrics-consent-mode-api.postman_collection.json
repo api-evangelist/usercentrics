@@ -1,0 +1,115 @@
+{
+  "item": [
+    {
+      "id": "82d9af38-9f24-4b14-b1d5-46860b69cc8f",
+      "name": "Consent Mode",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "702dc823-263b-49e3-868c-8dab0c786fca",
+          "name": "Update Google Consent Mode",
+          "request": {
+            "name": "Update Google Consent Mode",
+            "description": {
+              "content": "Update Google Consent Mode v2 signals (ad_storage, analytics_storage, ad_user_data, ad_personalization) based on current consent state.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "consent-mode",
+                "update"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"ad_storage\": \"<string>\",\n  \"analytics_storage\": \"<string>\",\n  \"ad_user_data\": \"<string>\",\n  \"ad_personalization\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "18b7a391-5619-435a-9cb4-7cbdf73e770a",
+              "name": "Consent Mode signals updated.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "consent-mode",
+                    "update"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"ad_storage\": \"<string>\",\n  \"analytics_storage\": \"<string>\",\n  \"ad_user_data\": \"<string>\",\n  \"ad_personalization\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "sdk://usercentrics.app",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "d596dc24-116c-458e-b83f-8a217ea04fd6",
+    "name": "Usercentrics App CMP SDK CCPA Consent Mode API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Public method surface of the Usercentrics App CMP SDK across iOS, tvOS, Android, AndroidTV,\nUnity, Flutter, and React Native. The SDK is delivered as a client-side library; this OpenAPI\ndocument models the SDK call surface as logical HTTP operations so that lifecycle, capability,\nand Naftiko tooling can reason about it uniformly with other Usercentrics surfaces.\n\nReference: https://docs.usercentrics.com/cmp_in_app_sdk/latest/api/api_documentation/\n\n\nContact Support:\n Name: Usercentrics Documentation",
+      "type": "text/plain"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Usercentrics App CMP SDK CCPA UI API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "UI",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Show First Layer",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "sdk://usercentrics.app/ui/show-first-layer"
+          },
+          "docs": "Programmatically display the first-layer consent banner (UC_UI.showFirstLayer)."
+        },
+        {
+          "info": {
+            "name": "Show Second Layer",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "sdk://usercentrics.app/ui/show-second-layer"
+          },
+          "docs": "Open the second-layer preference center (UC_UI.showSecondLayer)."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

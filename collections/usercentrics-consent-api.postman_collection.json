@@ -1,0 +1,734 @@
+{
+  "item": [
+    {
+      "id": "962cf874-2257-45df-b2c6-bfbe0572f9fb",
+      "name": "Consent",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "872454a0-886d-4eea-8302-0f7e62aee890",
+          "name": "Get CMP Data",
+          "request": {
+            "name": "Get CMP Data",
+            "description": {
+              "content": "Retrieve the active CMP configuration including service list, categories, and copy.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "cmp-data"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "4cc7d90a-fd88-47a0-8dc8-557b0c2a1d6c",
+              "name": "Active CMP configuration returned.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "cmp-data"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9196d2a3-b138-4ea2-91c1-68bdc6cf59ef",
+          "name": "Get Consents",
+          "request": {
+            "name": "Get Consents",
+            "description": {
+              "content": "Return the current per-service consent state stored on device.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "consents"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8310e3e1-e8b5-44a0-90b5-f225609ecea3",
+              "name": "Per-service consent state returned.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "consents"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "471ca61a-32c9-47b0-9b50-0ec76ee1b754",
+          "name": "Withdraw Consent",
+          "request": {
+            "name": "Withdraw Consent",
+            "description": {
+              "content": "Withdraw all consent for the current user (Cookiebot.withdraw()).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "consent",
+                "withdraw"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d26cba76-f976-4cd4-8940-1cd21a169201",
+              "name": "Consent withdrawn.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "consent",
+                    "withdraw"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c42d7889-51bd-4d19-9c1d-e8dcb43a94d4",
+          "name": "Submit Custom Consent",
+          "request": {
+            "name": "Submit Custom Consent",
+            "description": {
+              "content": "Submit a custom consent decision (Cookiebot.submitCustomConsent).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "consent",
+                "submit-custom"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"preferences\": \"<boolean>\",\n  \"statistics\": \"<boolean>\",\n  \"marketing\": \"<boolean>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "a136dcd9-7f83-4b10-afdb-6c3978f750bf",
+              "name": "Custom consent submitted.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "consent",
+                    "submit-custom"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"preferences\": \"<boolean>\",\n  \"statistics\": \"<boolean>\",\n  \"marketing\": \"<boolean>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "86256d94-5a9e-47e8-89e5-98d460bcc254",
+          "name": "Get Consent State",
+          "request": {
+            "name": "Get Consent State",
+            "description": {
+              "content": "Read Cookiebot.consent (necessary, preferences, statistics, marketing) flags.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "consent",
+                "state"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "d62f6566-5426-4d92-b7d0-328945516a43",
+              "name": "Consent flags returned.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "consent",
+                    "state"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a21f7a48-8cc4-4fcf-9582-3ab28de5f64f",
+          "name": "Get Script",
+          "request": {
+            "name": "Get Script",
+            "description": {
+              "content": "Retrieve a script blocked by Cookiebot pending consent (Cookiebot.getScript).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "scripts",
+                "get"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "69df4b51-27fc-4b7d-844d-485b073efe11",
+              "name": "Script retrieved.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "scripts",
+                    "get"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2204cf41-3e06-459b-bd45-5ac969543e81",
+          "name": "Run Scripts",
+          "request": {
+            "name": "Run Scripts",
+            "description": {
+              "content": "Execute scripts that have been gated on consent (Cookiebot.runScripts).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "scripts",
+                "run"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6322c136-8dfd-44cb-93af-1329536039bb",
+              "name": "Scripts executed.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "scripts",
+                    "run"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f7c8bb5b-7b11-46bf-8bdb-bdba665abbb7",
+          "name": "Accept All Services",
+          "request": {
+            "name": "Accept All Services",
+            "description": {
+              "content": "Grant consent for every configured service (UC_UI.acceptAllConsents).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "ui",
+                "accept-all"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "1ee7276e-8f7a-47a2-92c7-04fa2cddde2a",
+              "name": "All consents granted.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "ui",
+                    "accept-all"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "47ba693f-5171-4264-bf38-e30da96e81ed",
+          "name": "Deny All Services",
+          "request": {
+            "name": "Deny All Services",
+            "description": {
+              "content": "Deny consent for every configured service (UC_UI.denyAllConsents).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "ui",
+                "deny-all"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "6a5f04dc-2494-4f2b-911e-a84f5ee995f2",
+              "name": "All consents denied.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "ui",
+                    "deny-all"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2b4dfcb7-1012-4ef7-a97c-a0971c74d267",
+          "name": "Update Service Consents",
+          "request": {
+            "name": "Update Service Consents",
+            "description": {
+              "content": "Update consent state for a specific list of services (UC_UI.updateServices).",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "ui",
+                "update-services"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"services\": [\n    {\n      \"id\": \"<string>\",\n      \"consent\": \"<boolean>\"\n    },\n    {\n      \"id\": \"<string>\",\n      \"consent\": \"<boolean>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "31918409-b159-4ea4-b870-ec2c2c9379ba",
+              "name": "Consent updated.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "ui",
+                    "update-services"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"services\": [\n    {\n      \"id\": \"<string>\",\n      \"consent\": \"<boolean>\"\n    },\n    {\n      \"id\": \"<string>\",\n      \"consent\": \"<boolean>\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ee491767-a78b-4e6d-bd66-d43b96b9d705",
+          "name": "Get Services Base Info",
+          "request": {
+            "name": "Get Services Base Info",
+            "description": {
+              "content": "Return the configured services with current consent state.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "ui",
+                "services-base-info"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "e72c70eb-1471-4561-9a8f-18d59222ec8a",
+              "name": "Service list returned.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "ui",
+                    "services-base-info"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "sdk://usercentrics.app",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "e2b74263-9886-4966-b8db-d47b45a32bea",
+    "name": "Usercentrics App CMP SDK CCPA Consent API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Public method surface of the Usercentrics App CMP SDK across iOS, tvOS, Android, AndroidTV,\nUnity, Flutter, and React Native. The SDK is delivered as a client-side library; this OpenAPI\ndocument models the SDK call surface as logical HTTP operations so that lifecycle, capability,\nand Naftiko tooling can reason about it uniformly with other Usercentrics surfaces.\n\nReference: https://docs.usercentrics.com/cmp_in_app_sdk/latest/api/api_documentation/\n\n\nContact Support:\n Name: Usercentrics Documentation",
+      "type": "text/plain"
+    }
+  }
+}

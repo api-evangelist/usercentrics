@@ -1,0 +1,33 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Usercentrics App CMP SDK CCPA Consent Mode API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Consent Mode",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Update Google Consent Mode",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "sdk://usercentrics.app/consent-mode/update",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update Google Consent Mode v2 signals (ad_storage, analytics_storage, ad_user_data, ad_personalization) based on current consent state."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
