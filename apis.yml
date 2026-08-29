@@ -8,6 +8,18 @@ description: Usercentrics is a Munich-based consent management platform (CMP) an
   websites and apps across 195 countries, processing 8.8B+ monthly consents. Products span Web CMP,
   App CMP, CTV CMP, Server-Side Tagging, Meta Signals Gateway, Preference Manager, Privacy Policy
   Generator, Compliance Scanners, and MCP Manager for AI governance.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: unknown
