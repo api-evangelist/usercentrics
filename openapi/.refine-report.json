@@ -1,32 +1,43 @@
 {
   "provider": "usercentrics",
   "sources": [
-    "usercentrics-ccpa-api-openapi.yml",
-    "usercentrics-consent-api-openapi.yml",
-    "usercentrics-consent-mode-api-openapi.yml",
-    "usercentrics-controller-api-openapi.yml",
-    "usercentrics-dialog-api-openapi.yml",
-    "usercentrics-gpp-api-openapi.yml",
-    "usercentrics-lifecycle-api-openapi.yml",
-    "usercentrics-scanner-api-openapi.yml",
-    "usercentrics-tcf-api-openapi.yml",
-    "usercentrics-ui-api-openapi.yml"
+    "_original/usercentrics-app-cmp-sdk-openapi.yml",
+    "_original/usercentrics-cookiebot-cmp-openapi.yml",
+    "_original/usercentrics-web-cmp-v3-openapi.yml"
   ],
   "outputs": [
     "usercentrics-ccpa-api-openapi.yml",
     "usercentrics-consent-api-openapi.yml",
-    "usercentrics-consent-mode-api-openapi.yml",
     "usercentrics-controller-api-openapi.yml",
-    "usercentrics-dialog-api-openapi.yml",
-    "usercentrics-gpp-api-openapi.yml",
     "usercentrics-lifecycle-api-openapi.yml",
-    "usercentrics-scanner-api-openapi.yml",
     "usercentrics-tcf-api-openapi.yml",
+    "usercentrics-dialog-api-openapi.yml",
+    "usercentrics-scanner-api-openapi.yml",
+    "usercentrics-consent-mode-api-openapi.yml",
+    "usercentrics-gpp-api-openapi.yml",
     "usercentrics-ui-api-openapi.yml"
   ],
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (3 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "usercentrics-app-cmp-sdk-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "usercentrics-cookiebot-cmp-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "usercentrics-web-cmp-v3-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "tag 'Consent' spans 3 source specs (usercentrics-app-cmp-sdk-openapi.yml, usercentrics-cookiebot-cmp-openapi.yml, usercentrics-web-cmp-v3-openapi.yml): per-path servers applied",
+    "tag 'TCF' spans 2 source specs (usercentrics-app-cmp-sdk-openapi.yml, usercentrics-web-cmp-v3-openapi.yml): per-path servers applied"
+  ],
+  "skipped": [
+    "usercentrics-ccpa-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "usercentrics-consent-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "usercentrics-consent-mode-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "usercentrics-controller-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "usercentrics-dialog-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "usercentrics-gpp-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "usercentrics-lifecycle-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "usercentrics-scanner-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "usercentrics-tcf-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "usercentrics-ui-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

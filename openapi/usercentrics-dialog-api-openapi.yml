@@ -1,25 +1,23 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Usercentrics App CMP SDK CCPA Dialog API
-  description: 'Public method surface of the Usercentrics App CMP SDK across iOS, tvOS, Android, AndroidTV,
+  title: Cookiebot CMP Dialog API
+  description: 'Logical OpenAPI representation of the Cookiebot consent management platform browser API
 
-    Unity, Flutter, and React Native. The SDK is delivered as a client-side library; this OpenAPI
+    (Cookiebot global object) and the CookieConsent cookie consumed by server-side code in C#, PHP,
 
-    document models the SDK call surface as logical HTTP operations so that lifecycle, capability,
-
-    and Naftiko tooling can reason about it uniformly with other Usercentrics surfaces.
+    and VB. Cookiebot is a Usercentrics company following the September 2021 Cybot acquisition.
 
 
-    Reference: https://docs.usercentrics.com/cmp_in_app_sdk/latest/api/api_documentation/
+    Reference: https://www.cookiebot.com/en/developer/
 
     '
   version: 1.0.0
   contact:
-    name: Usercentrics Documentation
-    url: https://docs.usercentrics.com/cmp_in_app_sdk/latest/
+    name: Cookiebot Developer Documentation
+    url: https://www.cookiebot.com/en/developer/
 servers:
-- url: sdk://usercentrics.app
-  description: In-process App CMP SDK (logical URL).
+- url: https://consent.cookiebot.com
+  description: Cookiebot consent delivery CDN.
 tags:
 - name: Dialog
 paths:

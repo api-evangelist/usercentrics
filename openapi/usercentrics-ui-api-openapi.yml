@@ -1,25 +1,23 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Usercentrics App CMP SDK CCPA UI API
-  description: 'Public method surface of the Usercentrics App CMP SDK across iOS, tvOS, Android, AndroidTV,
+  title: Usercentrics Web CMP V3 UI API
+  description: 'Browser-side JavaScript surface of the Usercentrics Web CMP V3 modeled as logical HTTP
 
-    Unity, Flutter, and React Native. The SDK is delivered as a client-side library; this OpenAPI
+    operations. Covers the UC_UI control API, IAB TCF 2.3 __tcfapi, IAB GPP __gpp, and Google
 
-    document models the SDK call surface as logical HTTP operations so that lifecycle, capability,
-
-    and Naftiko tooling can reason about it uniformly with other Usercentrics surfaces.
+    Consent Mode v2 signals delivered through the Usercentrics CDN script.
 
 
-    Reference: https://docs.usercentrics.com/cmp_in_app_sdk/latest/api/api_documentation/
+    Reference: https://docs.usercentrics.com/cmp_v3/latest/
 
     '
-  version: 1.0.0
+  version: 3.0.0
   contact:
     name: Usercentrics Documentation
-    url: https://docs.usercentrics.com/cmp_in_app_sdk/latest/
+    url: https://docs.usercentrics.com/cmp_v3/latest/
 servers:
-- url: sdk://usercentrics.app
-  description: In-process App CMP SDK (logical URL).
+- url: https://app.usercentrics.eu
+  description: Usercentrics CDN/control plane (EU).
 tags:
 - name: UI
 paths:
