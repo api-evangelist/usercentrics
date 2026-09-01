@@ -57,7 +57,7 @@ apis:
   humanURL: https://usercentrics.com/integrations/
   tags:
   - Server-Side
-  - GTM
+  - Go-To-Market
   - Tagging
   - Meta
   - Conversions API
