@@ -10,9 +10,7 @@ info:
     and Naftiko tooling can reason about it uniformly with other Usercentrics surfaces.
 
 
-    Reference: https://docs.usercentrics.com/cmp_in_app_sdk/latest/api/api_documentation/
-
-    '
+    Reference: https://docs.usercentrics.com/cmp_in_app_sdk/latest/api/api_documentation/'
   version: 1.0.0
   contact:
     name: Usercentrics Documentation

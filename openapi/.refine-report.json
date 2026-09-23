@@ -26,7 +26,8 @@
     "usercentrics-cookiebot-cmp-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
     "usercentrics-web-cmp-v3-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
     "tag 'Consent' spans 3 source specs (usercentrics-app-cmp-sdk-openapi.yml, usercentrics-cookiebot-cmp-openapi.yml, usercentrics-web-cmp-v3-openapi.yml): per-path servers applied",
-    "tag 'TCF' spans 2 source specs (usercentrics-app-cmp-sdk-openapi.yml, usercentrics-web-cmp-v3-openapi.yml): per-path servers applied"
+    "tag 'TCF' spans 2 source specs (usercentrics-app-cmp-sdk-openapi.yml, usercentrics-web-cmp-v3-openapi.yml): per-path servers applied",
+    "apis.yml register: already-registered"
   ],
   "skipped": [
     "usercentrics-ccpa-api-openapi.yml: previously refined output, superseded by openapi/_original/",

@@ -8,9 +8,7 @@ info:
     Consent Mode v2 signals delivered through the Usercentrics CDN script.
 
 
-    Reference: https://docs.usercentrics.com/cmp_v3/latest/
-
-    '
+    Reference: https://docs.usercentrics.com/cmp_v3/latest/'
   version: 3.0.0
   contact:
     name: Usercentrics Documentation
