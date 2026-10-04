@@ -1,0 +1,44 @@
+slug: usercentrics
+provider: Usercentrics
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Software & Technology
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 3
+edges:
+- tag: Consent
+  spec_file: usercentrics-consent-api-openapi.yml
+  capability_id: BC-130.50
+  capability_id_l1: BC-130
+  capability_name: Privacy & Data Protection Management
+  confidence: 0.88
+  evidence: POST /consent/withdraw Withdraw Consent; GET /consent/state Get Consent State; POST /ui/update-services
+    Update Service Consents
+  reason: Operations capture, read, update and withdraw end-user consent for tracking services — the core
+    of consent management under GDPR-style regimes, i.e. privacy & data protection compliance.
+- tag: Consent Mode
+  spec_file: usercentrics-consent-mode-api-openapi.yml
+  capability_id: BC-130.50
+  capability_id_l1: BC-130
+  capability_name: Privacy & Data Protection Management
+  confidence: 0.7
+  evidence: POST /consent-mode/update consentModeUpdate Update Google Consent Mode
+  reason: Single operation propagates the user's consent decision as Google Consent Mode v2 signals; it
+    is a consent-signal relay, so privacy & data protection management is the honest fit, though the surface
+    is thin.
+- tag: TCF
+  spec_file: usercentrics-tcf-api-openapi.yml
+  capability_id: BC-130.50
+  capability_id_l1: BC-130
+  capability_name: Privacy & Data Protection Management
+  confidence: 0.7
+  evidence: GET /tcf-data getTcfData Get TCF Data; POST /tcf/get-tc-data tcfGetTCData Get TC Data
+  reason: Exposes IAB TCF 2.3 transparency-and-consent data and change events, i.e. the regulated consent
+    record for advertising vendors — privacy & data protection management.

@@ -361,6 +361,9 @@ apis:
   - type: Support
     url: https://support.cookiebot.com/hc/en-us/
 common:
+  - type: CapabilityMap
+    url: capabilities/usercentrics-capability-edges.yml
+    name: Usercentrics Business Capability Map
   - type: AgenticAccess
     url: agentic-access/usercentrics-agentic-access.yml
   - type: DomainSecurity
