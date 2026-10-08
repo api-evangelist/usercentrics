@@ -364,3 +364,168 @@ plans:
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - seat
+  - subscription
+  units:
+  - message
+  - object
+  - period
+  - request
+  - seat
+  plans:
+  - name: Web CMP Free
+    access: free
+    model: subscription
+    model_how: derived
+    units:
+    - object
+    periods:
+    - month
+  - name: Web CMP Essential
+    access: paid
+    model: subscription
+    model_how: derived
+    units:
+    - period
+    periods:
+    - month
+  - name: Web CMP Plus
+    access: paid
+    model: subscription
+    model_how: derived
+    units:
+    - period
+    periods:
+    - month
+  - name: Web CMP Pro
+    access: paid
+    model: subscription
+    model_how: derived
+    units:
+    - period
+    periods:
+    - month
+  - name: Web CMP Business
+    access: paid
+    model: subscription
+    model_how: derived
+    units:
+    - period
+    periods:
+    - month
+  - name: Web CMP Corporate
+    access: enterprise
+    model: subscription
+    model_how: derived
+    units:
+    - period
+    periods:
+    - month
+  - name: App CMP Advanced
+    access: paid
+    model: seat
+    model_how: derived
+    units:
+    - seat
+    periods:
+    - month
+  - name: App CMP Premium
+    access: enterprise
+    model: seat
+    model_how: derived
+    units:
+    - seat
+    periods:
+    - month
+  - name: TV Premium
+    access: enterprise
+    model: subscription
+    model_how: derived
+    units:
+    - other
+    periods:
+    - month
+  - name: Privacy Policy Generator Free
+    access: free
+    model: subscription
+    model_how: derived
+    units:
+    - other
+    periods:
+    - month
+  - name: Privacy Policy Generator Pro
+    access: paid
+    model: subscription
+    model_how: derived
+    units:
+    - period
+    periods:
+    - month
+  - name: Server-Side Tagging Starter
+    access: free
+    model: subscription
+    model_how: derived
+    units:
+    - request
+    periods:
+    - month
+  - name: Server-Side Tagging Growth
+    access: paid
+    model: subscription
+    model_how: derived
+    units:
+    - request
+    periods:
+    - month
+  - name: Server-Side Tagging Scale
+    access: paid
+    model: subscription
+    model_how: derived
+    units:
+    - request
+    periods:
+    - month
+  - name: Server-Side Tagging Performance
+    access: paid
+    model: subscription
+    model_how: derived
+    units:
+    - request
+    periods:
+    - month
+  - name: Meta Signals Gateway Starter
+    access: free
+    model: subscription
+    model_how: derived
+    units:
+    - message
+    periods:
+    - month
+  - name: Meta Signals Gateway Growth
+    access: paid
+    model: subscription
+    model_how: derived
+    units:
+    - message
+    periods:
+    - month
+  - name: Meta Signals Gateway Scale
+    access: paid
+    model: subscription
+    model_how: derived
+    units:
+    - message
+    periods:
+    - month
+  - name: Meta Signals Gateway Performance
+    access: paid
+    model: subscription
+    model_how: derived
+    units:
+    - message
+    periods:
+    - month
