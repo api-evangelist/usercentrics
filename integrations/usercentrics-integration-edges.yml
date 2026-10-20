@@ -1,9 +1,19 @@
-generated: '2026-10-15'
+generated: '2026-10-20'
 method: searched
-checked:
-- shopify/integrations/shopify-integration-edges.yml
 source:
 - shopify/integrations/shopify-integration-edges.yml
+- https://zapier.com/apps/usercentrics/integrations
+- https://n8n.io/integrations/usercentrics/
+- https://composio.dev/toolkits/usercentrics
+- https://monid.ai/tools/usercentrics
+checked:
+- shopify/integrations/shopify-integration-edges.yml
+- https://composio.dev/toolkits/usercentrics
+- https://monid.ai/tools/usercentrics
+- https://n8n.io/integrations/usercentrics/
+- https://zapier.com/apps/usercentrics/integrations
+summary: null
+marketplace_apps: []
 edges:
 - partner_name: Shopify (own)
   partner: shopify
@@ -21,3 +31,4 @@ edges:
   listing_count: 1
   detected: '2026-10-15'
   detected_by: mirror-platform-listings.py
+templates: []
