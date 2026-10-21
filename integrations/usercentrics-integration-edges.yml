@@ -12,9 +12,44 @@ checked:
 - https://monid.ai/tools/usercentrics
 - https://n8n.io/integrations/usercentrics/
 - https://zapier.com/apps/usercentrics/integrations
+- https://cdn.cocoapods.org/all_pods.txt
+- https://cert.appdefensealliance.org/certifications
+- https://play.google.com/sdks
+- https://search.maven.org/solrsearch/select
+- google-play/integrations/google-play-integration-edges.yml
 summary: null
 marketplace_apps: []
 edges:
+- partner_name: CocoaPods trunk
+  partner: null
+  partner_match: register
+  type: register
+  channel: package-registry
+  relationship: distribution-channel
+  direction: provider-built
+  evidence: https://cocoapods.org/pods/Usercentrics
+  category: iOS SDK (CocoaPods)
+  contract_reference:
+    register: CocoaPods trunk (cdn.cocoapods.org Specs; github.com/CocoaPods/Specs)
+    spec_file: null
+    role: cocoapods-publisher
+    registered_name: Usercentrics
+    matched_domain: usercentrics.com
+    matched_by: domain+name-among-holders
+    pods:
+    - pod: Usercentrics
+      version: 2.33.1-unity-static
+      homepage: https://docs.usercentrics.com/cmp_in_app_sdk/latest/
+      deprecated: false
+    - pod: UsercentricsUI
+      version: 2.33.1-unity-static
+      homepage: https://docs.usercentrics.com/cmp_in_app_sdk/latest/
+      deprecated: false
+    signal_note: latest podspec homepage (domain) + authors (name); pods, versions and counts are context
+    detected_by: sweep-mobile-sdk-index.py
+    detected: '2026-10-21'
+  detected_by: sweep-mobile-sdk-index.py
+  first_seen: '2026-10-21'
 - partner_name: Shopify (own)
   partner: shopify
   partner_match: mirror
@@ -31,4 +66,23 @@ edges:
   listing_count: 1
   detected: '2026-10-15'
   detected_by: mirror-platform-listings.py
+- partner_name: Google Play Developer (Google Play SDK Index)
+  partner: google-play
+  partner_match: mirror
+  mirror_match: domain+name-among-holders
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: Google Play SDK Index
+  evidence: https://play.google.com/sdks/details/com-usercentrics-sdk-usercentrics
+  mirror_of: google-play/integrations/google-play-integration-edges.yml
+  apps:
+  - Usercentrics
+  listing_count: 1
+  detected: '2026-10-21'
+  detected_by: mirror-platform-listings.py
+  category: mobile SDK (data-management)
+  publisher_verified:
+  - Registered in Google Play SDK Console
 templates: []
