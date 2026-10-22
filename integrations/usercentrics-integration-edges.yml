@@ -17,6 +17,7 @@ checked:
 - https://play.google.com/sdks
 - https://search.maven.org/solrsearch/select
 - google-play/integrations/google-play-integration-edges.yml
+- wix/integrations/wix-integration-edges.yml
 summary: null
 marketplace_apps: []
 edges:
@@ -85,4 +86,25 @@ edges:
   category: mobile SDK (data-management)
   publisher_verified:
   - Registered in Google Play SDK Console
+- partner_name: Wix (own)
+  partner: wix
+  partner_match: mirror
+  mirror_match: domain+name-among-holders
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://www.wix.com/app-market/developer/usercentrics-gmbh
+  mirror_of: wix/integrations/wix-integration-edges.yml
+  apps:
+  - Usercentrics for Wix
+  listing_count: 1
+  detected: '2026-10-22'
+  detected_by: mirror-platform-listings.py
+  category: Privacy & Security
+  badges:
+  - WIX_CHOICE
+  publisher_verified:
+  - Verified by Wix
 templates: []

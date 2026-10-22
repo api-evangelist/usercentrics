@@ -58,3 +58,16 @@
   relationship: platform-app
   status: not-a-workflow
   arazzo: null
+- slug: usercentrics-wix-own
+  label: Wix (own)
+  partner: wix
+  partner_name: Wix (own)
+  category: Privacy & Security
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.wix.com/app-market/developer/usercentrics-gmbh
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
