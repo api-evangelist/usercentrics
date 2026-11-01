@@ -1,4 +1,4 @@
-# Usercentrics (usercentrics)
+# Usercentrics
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,150 +66,140 @@
 
 Usercentrics is a Munich-based consent management platform (CMP) and privacy compliance provider. Founded in 2017 and led by CEO Donna Dror, Usercentrics acquired Danish CMP Cookiebot (Cybot) in September 2021 and acquired MCP Manager in January 2026. The platform serves 2.4M+ websites and apps across 195 countries, processing 8.8B+ monthly consents. Products span Web CMP, App CMP, CTV CMP, Server-Side Tagging, Meta Signals Gateway, Preference Manager, Privacy Policy Generator, Compliance Scanners, and MCP Manager for AI governance.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/usercentrics/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/usercentrics/refs/heads/main/apis.yml)
+**Areas:** Privacy · Consent · CMP · Compliance · GDPR · CCPA · TCF · GPP · Cookies · AI Governance
 
-## Tags
+## Usercentrics on APIs.io
 
-- Privacy
-- Consent
-- CMP
-- Compliance
-- GDPR
-- CCPA
-- TCF
-- GPP
-- Cookies
-- AI Governance
+Everything profiled for Usercentrics is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/usercentrics/](https://apis.io/providers/usercentrics/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (11)
 
-- **Created:** 2026-05-25
-- **Modified:** 2026-05-25
+- [Usercentrics Server-Side Tagging (sGTM)](https://apis.io/apis/usercentrics/server-side-tagging/) — Hosted server-side Google Tag Manager service for first-party data collection, consent enforcement, and tag execution off the browser. Includes Meta Signals…
+- [Usercentrics CCPA API](https://apis.io/apis/usercentrics/usercentrics-ccpa-api/) — The CCPA API from Usercentrics — 1 operation(s) for ccpa.
+- [Usercentrics Consent API](https://apis.io/apis/usercentrics/usercentrics-consent-api/) — The Consent API from Usercentrics — 11 operation(s) for consent.
+- [Usercentrics Consent Mode API](https://apis.io/apis/usercentrics/usercentrics-consent-mode-api/) — The Consent Mode API from Usercentrics — 1 operation(s) for consent mode.
+- [Usercentrics Controller API](https://apis.io/apis/usercentrics/usercentrics-controller-api/) — The Controller API from Usercentrics — 1 operation(s) for controller.
+- [Usercentrics Dialog API](https://apis.io/apis/usercentrics/usercentrics-dialog-api/) — The Dialog API from Usercentrics — 3 operation(s) for dialog.
+- [Usercentrics GPP API](https://apis.io/apis/usercentrics/usercentrics-gpp-api/) — The GPP API from Usercentrics — 2 operation(s) for gpp.
+- [Usercentrics Lifecycle API](https://apis.io/apis/usercentrics/usercentrics-lifecycle-api/) — The Lifecycle API from Usercentrics — 4 operation(s) for lifecycle.
+- [Usercentrics Scanner API](https://apis.io/apis/usercentrics/usercentrics-scanner-api/) — The Scanner API from Usercentrics — 1 operation(s) for scanner.
+- [Usercentrics TCF API](https://apis.io/apis/usercentrics/usercentrics-tcf-api/) — The TCF API from Usercentrics — 3 operation(s) for tcf.
+- [Usercentrics UI API](https://apis.io/apis/usercentrics/usercentrics-ui-api/) — The UI API from Usercentrics — 2 operation(s) for ui.
 
-## APIs
+### Published properties
 
-### Usercentrics App CMP SDK
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-Mobile and TV consent management SDK with native iOS (11+), tvOS (11+), Android (API 16+), AndroidTV, Unity (2018.4+), Flutter (1.20+), and React Native (0.65+) support. Comprises UsercentricsCore (backend logic) and UsercentricsUI (prebuilt banner). Supports GDPR, CCPA, LGPD, and IAB TCF 2.0.
+#### Agentic access (1)
 
-- **Human URL:** [https://docs.usercentrics.com/cmp_in_app_sdk/latest/](https://docs.usercentrics.com/cmp_in_app_sdk/latest/)
+Which operations an agent can call, which act, and which need a human in the loop.
 
-#### Tags
+- [Usercentrics Agentic Access](https://apis.io/agentic-access/usercentrics/usercentrics-agentic-access/)
 
-- SDK
-- Mobile
-- iOS
-- Android
-- Flutter
-- React Native
-- Unity
-- TV
-- Consent
+#### Collections (13)
 
-#### Properties
+Postman and Open Collection request collections.
 
-- [Documentation](https://docs.usercentrics.com/cmp_in_app_sdk/latest/)
-- [API Reference](https://docs.usercentrics.com/cmp_in_app_sdk/latest/api/api_documentation/)
-- [SDK](https://github.com/Usercentrics/flutter-sdk)
-- [SDK](https://github.com/Usercentrics/react-native-sdk)
-- [SDK](https://github.com/Usercentrics/ios-sample)
-- [SDK](https://github.com/Usercentrics/android-sample)
-- [OpenAPI](openapi/usercentrics-app-cmp-sdk-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/usercentrics-app-cmp-sdk.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/usercentrics-app-cmp-sdk.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Usercentrics App CMP SDK API](https://apis.io/collections/usercentrics/open-usercentrics-app-cmp-sdk/)
+- [Usercentrics App CMP SDK CCPA API](https://apis.io/collections/usercentrics/open-usercentrics-ccpa-api/)
+- [Usercentrics App CMP SDK CCPA Consent API](https://apis.io/collections/usercentrics/open-usercentrics-consent-api/)
+- [Usercentrics App CMP SDK CCPA Consent Mode API](https://apis.io/collections/usercentrics/open-usercentrics-consent-mode-api/)
+- [Usercentrics App CMP SDK CCPA Controller API](https://apis.io/collections/usercentrics/open-usercentrics-controller-api/)
+- [Cookiebot CMP API](https://apis.io/collections/usercentrics/open-usercentrics-cookiebot-cmp/)
+- [Usercentrics App CMP SDK CCPA Dialog API](https://apis.io/collections/usercentrics/open-usercentrics-dialog-api/)
+- [Usercentrics App CMP SDK CCPA GPP API](https://apis.io/collections/usercentrics/open-usercentrics-gpp-api/)
+- [Usercentrics App CMP SDK CCPA Lifecycle API](https://apis.io/collections/usercentrics/open-usercentrics-lifecycle-api/)
+- [Usercentrics App CMP SDK CCPA Scanner API](https://apis.io/collections/usercentrics/open-usercentrics-scanner-api/)
+- [Usercentrics App CMP SDK CCPA TCF API](https://apis.io/collections/usercentrics/open-usercentrics-tcf-api/)
+- [Usercentrics App CMP SDK CCPA UI API](https://apis.io/collections/usercentrics/open-usercentrics-ui-api/)
+- [Usercentrics Web CMP V3 API](https://apis.io/collections/usercentrics/open-usercentrics-web-cmp-v3/)
 
-### Usercentrics Web CMP (V3)
+#### Security (1)
 
-Browser-side consent management platform for websites. Exposes the UC_UI JavaScript API, IAB __tcfapi (TCF 2.3), IAB __gpp (GPP), dataLayer events, and Google Consent Mode v2 / Microsoft UET Consent Mode signals. Configurable through the Usercentrics Admin Interface and delivered via the Usercentrics CDN.
+Authentication, trust centre, and vulnerability disclosure.
 
-- **Human URL:** [https://docs.usercentrics.com/cmp_v3/latest/](https://docs.usercentrics.com/cmp_v3/latest/)
+- [Usercentrics Domain Security](https://apis.io/security/usercentrics/usercentrics-domain-security/)
 
-#### Tags
+#### Plans and pricing (1)
 
-- Web
-- JavaScript
-- CMP
-- TCF
-- GPP
-- Consent Mode
+Published plans, tiers and prices.
 
-#### Properties
+- [Usercentrics Plans Pricing](https://apis.io/plans/usercentrics/usercentrics-plans-pricing/)
 
-- [Documentation](https://docs.usercentrics.com/cmp_v3/latest/)
-- [OpenAPI](openapi/usercentrics-web-cmp-v3-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/usercentrics-web-cmp-v3.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/usercentrics-web-cmp-v3.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+#### Rate limits (1)
 
-### Cookiebot CMP
+Published request limits.
 
-Cookiebot consent management platform (a Usercentrics company since the September 2021 Cybot acquisition). Provides a JavaScript SDK (Cookiebot global, show()/hide()/renew()/getScript()/ runScripts()/withdraw()/submitCustomConsent()), CookiebotOnConsentReady / OnAccept / OnDecline events, server-side CookieConsent cookie integration (C#, PHP, VB samples), and the patented monthly site scanner.
+- [Usercentrics Rate Limits](https://apis.io/rate-limits/usercentrics/usercentrics-rate-limits/)
 
-- **Human URL:** [https://www.cookiebot.com/en/developer/](https://www.cookiebot.com/en/developer/)
+#### FinOps (1)
 
-#### Tags
+What the API costs to run, by operation.
 
-- Cookies
-- Scanner
-- JavaScript
-- GDPR
-- GTM
+- [Usercentrics Finops](https://apis.io/finops/usercentrics/usercentrics-finops/)
 
-#### Properties
+## Where to find this API
 
-- [Documentation](https://www.cookiebot.com/en/developer/)
-- [Documentation](https://www.cookiebot.com/en/help/)
-- [Support](https://support.cookiebot.com/hc/en-us/)
-- [OpenAPI](openapi/usercentrics-cookiebot-cmp-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/usercentrics-cookiebot-cmp.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/usercentrics-cookiebot-cmp.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Usercentrics Server-Side Tagging (sGTM)
-
-Hosted server-side Google Tag Manager service for first-party data collection, consent enforcement, and tag execution off the browser. Includes Meta Signals Gateway for the Meta Conversions API and consent-aware event forwarding.
-
-- **Human URL:** [https://usercentrics.com/integrations/](https://usercentrics.com/integrations/)
-
-#### Tags
-
-- Server-Side
-- GTM
-- Tagging
-- Meta
-- Conversions API
-
-#### Properties
-
-- [Documentation](https://usercentrics.com/integrations/)
-- [Postman Collection](collections/usercentrics-app-cmp-sdk.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/usercentrics-app-cmp-sdk.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Postman Collection](collections/usercentrics-cookiebot-cmp.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/usercentrics-cookiebot-cmp.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-- [Postman Collection](collections/usercentrics-web-cmp-v3.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/usercentrics-web-cmp-v3.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://usercentrics.com/)
-- [Portal](https://docs.usercentrics.com/)
-- [Sign Up](https://usercentrics.com/free-trial/)
-- [Pricing](https://usercentrics.com/pricing/)
-- [Plans](plans/usercentrics-plans-pricing.yml)
-- [Rate Limits](rate-limits/usercentrics-rate-limits.yml)
-- [Fin Ops](finops/usercentrics-finops.yml)
-- [Blog](https://usercentrics.com/knowledge-hub/)
-- [Support](https://support.usercentrics.com/)
-- [Privacy Policy](https://usercentrics.com/privacy-policy/)
-- [Terms of Service](https://usercentrics.com/terms-and-conditions/)
 - [Documentation](https://usercentrics.com/legal-documents/)
-- [GitHub Organization](https://github.com/Usercentrics)
-- [LinkedIn](https://www.linkedin.com/company/usercentrics/)
-- [Documentation](https://www.cookiebot.com/en/)
-- [Features](undefined)
-- [Use Cases](undefined)
-- [Integrations](undefined)
-- [Solutions](undefined)
+- [Pricing](https://usercentrics.com/pricing/)
+- [Support](https://support.usercentrics.com/)
+- [Blog](https://usercentrics.com/knowledge-hub/)
+- [Terms of service](https://usercentrics.com/terms-and-conditions/)
+- [Privacy policy](https://usercentrics.com/privacy-policy/)
+- [GitHub](https://github.com/Usercentrics)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 36.6** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 62.5 |
+| Contract quality | 43.3 |
+| Contract governance | 0.0 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 42.9 |
+| Access clarity | 52.6 |
+
+**Agent readiness 17.1** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | documented (partial credit) |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 13.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/usercentrics/](https://apis.io/providers/usercentrics/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Usercentrics: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/usercentrics/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
